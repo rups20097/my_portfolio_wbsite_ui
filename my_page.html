@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./my_page.css">
+    <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
+    <script src="https://kit.fontawesome.com/16c892dcaa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -16,16 +18,25 @@
             <ul class="navbar_ul">
                 <li onclick="goto(0)" class="navbar_li">Introduction</li>
                 <li onclick="goto(450)" class="navbar_li">Resume</li>
-                <li class="navbar_li">Projects</li>
-                <li class="navbar_li">Queries</li>
-                <li class="navbar_li">Hobbies</li>
-                <li class="navbar_li">My Notes</li>
-                <li class="navbar_li">Contacts</li>
+                <li onclick="goto(1000)" class="navbar_li">Projects</li>
+                <li onclick="goto(1650)" class="navbar_li">Skills</li>
+                <li onclick="goto(2230)" class="navbar_li">Quotes</li>
+                <li onclick="goto(3420)" class="navbar_li">Hobbies</li>
+                <li onclick="goto(4500)" class="navbar_li">Contacts</li>
             </ul>
             <script>
                 function goto(y_axis) {
                     window.scrollTo(0, y_axis);
                 }
+
+                $(function () {
+                    var $nav = $(".fixed_nav");
+                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                    $(document).scroll(function () {
+                        var $nav = $(".fixed_nav");
+                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                    });
+                });
             </script>
         </div>
         <div class="image_box">
@@ -39,13 +50,6 @@
                     let h = $('.my_img').height();
                     $('.my_img_shadow').height(`${h}`);
                 })
-
-                $(function () {
-                    $(document).scroll(function () {
-                        var $nav = $(".fixed_nav");
-                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-                    });
-                });
             </script>
         </div>
         <section style="margin-top: 40px;">
@@ -102,16 +106,25 @@
                 <div class="follow_mid">
                     <div id="subheader_projects" class="subheader">Client's Projects</div>
                     <div style="text-align: right;">
-                        <div style="margin-bottom: 10px; color: #8c8c8c;">start animation or click on tiles</div>
-                        <button class="btn" onclick="start()">Start Animation</button>
-                        <button class="btn" style="" onclick="stop()">Stop</button>
+                        <div style="margin-bottom: 10px; color: #8c8c8c;">start / stop animation and click on tiles</div>
+                        <button class="btn b1" onclick="start()">Start Animation</button>
+                        <button class="btn b2" style="" onclick="stop()">Stop</button>
                     </div>
 
                       <div id="all_here" style="position: relative;">
                         <div onclick="comeFirst(1)" class='box1'>
                             <div class="card_header">Abbvie Inc.</div>
                             <div class="card_body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="tech_used">
+                                <img id="node_icon" src="./images/nodejs.png">
+                                <img id="html_icon" src="./images/html5.png">
+                                <img id="css_icon" src="./images/css.png">
+                                <img id="js_icon" src="./images/Javascript.png">
                             </div>
                         </div>
                         <div onclick="comeFirst(2)" class='box2'>
@@ -119,11 +132,19 @@
                             <div class="card_body">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </div>
+                            <div class="tech_used">
+                                <img id="node_icon" src="./images/nodejs.png">
+                                <img id="angular_icon" src="./images/angular.png">
+                            </div>
                         </div>
                         <div onclick="comeFirst(3)" class='box3'>
                             <div class="card_header">Location Tracker</div>
                             <div class="card_body">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                            <div class="tech_used">
+                                <img id="node_icon" src="./images/nodejs.png">
+                                <img id="android_icon" src="./images/android.png">
                             </div>
                         </div>
                       </div>
@@ -157,105 +178,113 @@
 
                             let topTile = 1;
                             function comeFirst(n) {
-                            console.log('top->', topTile)
                             if (n == 2) {
                                 $('#subheader_projects').text('Client\'s Projects');
                                 if (topTile == 1) {
-                                shirkTile('.box1');
-                                makeFirst('.box2');
-                                setTimeout(() => {
-                                    makeSecond('.box3');
-                                }, 300);
-                                setTimeout(() => {
-                                    makeThird('.box1');
-                                }, 400)
-                                } else if (topTile == 3) {
-                                shirkTile('.box3');
-                                shirkTile('.box1');
-                                makeFirst('.box2');
-                                setTimeout(() => {
-                                    makeSecond('.box3');
-                                },300);
-                                setTimeout(() => {
-                                    makeThird('.box1');
-                                }, 400)
+                                    shirkTile('.box1');
+                                    makeFirst('.box2');
+                                    setTimeout(() => {
+                                        makeSecond('.box3');
+                                    }, 300);
+                                    setTimeout(() => {
+                                        makeThird('.box1');
+                                    }, 400)
+                                    } else if (topTile == 3) {
+                                    shirkTile('.box3');
+                                    shirkTile('.box1');
+                                    makeFirst('.box2');
+                                    setTimeout(() => {
+                                        makeSecond('.box3');
+                                    },300);
+                                    setTimeout(() => {
+                                        makeThird('.box1');
+                                    }, 400)
                                 }
                             }
                             if (n == 3) {
                                 $('#subheader_projects').text('Self Project');
                                 if (topTile == 1) {
-                                shirkTile('.box2');
-                                shirkTile('.box1');
-                                makeFirst('.box3');
-                                setTimeout(() => {
-                                    makeSecond('.box1');
-                                },300);
-                                setTimeout(() => {
-                                    makeThird('.box2');
-                                }, 400)
-                                } else if (topTile == 2) {
-                                shirkTile('.box2');
-                                makeFirst('.box3');
-                                setTimeout(() => {
-                                    makeSecond('.box1');
-                                }, 300)
-                                setTimeout(() => {
-                                    makeThird('.box2');
-                                }, 400)
+                                    shirkTile('.box2');
+                                    shirkTile('.box1');
+                                    makeFirst('.box3');
+                                    setTimeout(() => {
+                                        makeSecond('.box1');
+                                    },300);
+                                    setTimeout(() => {
+                                        makeThird('.box2');
+                                    }, 400)
+                                    } else if (topTile == 2) {
+                                    shirkTile('.box2');
+                                    makeFirst('.box3');
+                                    setTimeout(() => {
+                                        makeSecond('.box1');
+                                    }, 300)
+                                    setTimeout(() => {
+                                        makeThird('.box2');
+                                    }, 400)
                                 }
                             }
                             if (n == 1) {
                                 $('#subheader_projects').text('Client\'s Projects');
                                 if (topTile == 2) {
-                                shirkTile('.box2');
-                                shirkTile('.box3');
-                                makeFirst('.box1');
-                                setTimeout(() => {
-                                    makeSecond('.box2');
-                                }, 300);
-                                setTimeout(() => {
-                                    makeThird('.box3');
-                                }, 400)
-                                } else if (topTile == 3) {
-                                shirkTile('.box3');
-                                makeFirst('.box1');
-                                setTimeout(() => {
-                                    makeSecond('.box2');
-                                }, 300)
-                                setTimeout(() => {
-                                    makeThird('.box3');
-                                }, 400)
+                                    shirkTile('.box2');
+                                    shirkTile('.box3');
+                                    makeFirst('.box1');
+                                    setTimeout(() => {
+                                        makeSecond('.box2');
+                                    }, 300);
+                                    setTimeout(() => {
+                                        makeThird('.box3');
+                                    }, 400)
+                                    } else if (topTile == 3) {
+                                    shirkTile('.box3');
+                                    makeFirst('.box1');
+                                    setTimeout(() => {
+                                        makeSecond('.box2');
+                                    }, 300)
+                                    setTimeout(() => {
+                                        makeThird('.box3');
+                                    }, 400)
                                 }
                             }
                             topTile = n;
                             }
 
                             function starts() {
-                            let i = 2;
-                            return function () {
-                                comeFirst(i);
-                                if (i + 1 > 3) {
-                                i = 1;
-                                } else {
-                                i += 1;
+                                let i = 2;
+                                return function () {
+                                    comeFirst(i);
+                                    if (i + 1 > 3) {
+                                        i = 1;
+                                    } else {
+                                        i += 1;
+                                    }
                                 }
-                            }
                             }
 
                             let x;
 
                             (function() {
+                                $('#all_here').css('pointer-events', 'none')
+                                $('.b1').css('display', 'none')
+                                $('.b2').css('display', 'block')
                                 let loop = starts();
-                                x = setInterval(loop, 1500)
+                                x = setInterval(loop, 3000)
                             })();
 
                             function start() {
+                                $('#all_here').css('pointer-events', 'none')
+                                $('.b1').css('display', 'none');
+                                $('.b2').css('display', 'block');
                                 let loop = starts();
-                                x = setInterval(loop, 1500)
+                                x = setInterval(loop, 3000)
                             }
 
                             function stop() {
-                            clearInterval(x);
+                                $('#all_here').css('pointer-events', 'all')
+                                $('.b1').css('display', 'block')
+                                $('.b2').css('display', 'none')
+                                clearInterval(x);
                             }
                       </script>
                 </div>
@@ -263,8 +292,358 @@
                 <div class="header row" style="text-align: center; 
                 width: 1110px;
                 margin: 500px auto 20px;" class="">
+                    <div class="line col-4"></div><div class="col-4 header_name" style="padding: 0 !important;">Technical Skills</div><div class="line col-4"></div>
+                </div>
+                <div class="follow_mid">
+                    <div class="row">
+                        <div class="skill_cards col-3">
+                            <img style="width: 100%;" src="./images/sailsjs.png">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                        <div class="skill_cards col-3">
+                            <img style="height: 100%;" src="./images/html5.png">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                        <div class="skill_cards col-3">
+                            <img style="height: 100%;" src="./images/css.png">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="skill_cards col-3">
+                            <img style="height: 100%; " src="./images/Javascript.png">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                        <div class="skill_cards col-3">
+                            <img style="height: 100%;" src="./images/angular.png">
+                        </div>
+                        <div class="col-1">
+                        </div>
+                        <div class="skill_cards col-3">
+                            <img style="height: 100%;" src="./images/android.png">
+                        </div>
+                        <!-- <div class="tool_tip">Hover over me</div> -->
+                    </div>
+                </div>
+
+                <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 50px auto 20px;" class="">
                     <div class="line col-5"></div><div class="col-2 header_name">Quotes</div><div class="line col-5"></div>
                 </div>
+
+                <div class="follow_mid">
+                    <div class="subheader">Clients' Word</div>
+                    <div class="client_quotes row">
+                        <div class="col-1"></div>
+                        <div class="col-5">
+                            <img class="client_image" src="./images/img1.png">
+                            <div class="client_words" style="background: #A25699;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
+                                    <g id="quotes" transform="translate(-4.5 -6.75)">
+                                    <path id="Path_2" data-name="Path 2" d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z" fill="#fff"/>
+                                    <path id="Path_3" data-name="Path 3" d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z" transform="translate(7.34)" fill="#fff"/>
+                                    </g>
+                                </svg>
+                                
+                                <div class="words">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+                                    <div class="client_details">
+                                        <div>Gyan P Srivastav</div>
+                                        <div class="client_designation">Scientific Engineer<br />
+                                        Abbvie Inc.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <img class="client_image" src="./images/img2.png">
+                            <div class="client_words" style="background: #8256A2;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
+                                    <g id="quotes" transform="translate(-4.5 -6.75)">
+                                    <path id="Path_2" data-name="Path 2" d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z" fill="#fff"/>
+                                    <path id="Path_3" data-name="Path 3" d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z" transform="translate(7.34)" fill="#fff"/>
+                                    </g>
+                                </svg>
+                                
+                                <div class="words">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+                                    <div class="client_details">
+                                        <div>Gyan P Srivastav</div>
+                                        <div class="client_designation">Scientific Engineer<br />
+                                        Abbvie Inc.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                    </div>
+
+                    <div class="subheader">Employees' Word</div>
+                    <div class="employee_words_box">
+                        <div class="employee_words">
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                                <div class="employee_details">
+                                    <div style="font-size: 12px;">Sayon Mozumder</div>
+                                    <div style="">iOS developer<br />
+                                    Company Name</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="employee_words" style="background-color: #A25670;">
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                                <div class="employee_details">
+                                    <div style="font-size: 12px;">Sayon Mozumder</div>
+                                    <div style="">iOS developer<br />
+                                    Company Name</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="employee_words" style="background-color: #A25656;">
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                                <div class="employee_details">
+                                    <div style="font-size: 12px;">Sayon Mozumder</div>
+                                    <div style="">iOS developer<br />
+                                    Company Name</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="employee_words" style="background-color: #a29956;">
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                                <div class="employee_details">
+                                    <div style="font-size: 12px;">Sayon Mozumder</div>
+                                    <div style="">iOS developer<br />
+                                    Company Name</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 50px auto 20px;" class="">
+                    <div class="line col-5"></div><div class="col-2 header_name">Hobbies</div><div class="line col-5"></div>
+                </div>
+
+                <div style="margin-bottom: 50px;">
+
+
+                    <div id="back_box">
+                        <div class="color1"></div>
+                        <div class="color2"></div>
+                        <div class="color3"></div>
+                        <div class="color4"></div>
+                        
+                        <!-- <div class="" style="position: relative;"> -->
+                        <div class="">
+                            <div id="hobbies_image_box">
+                                <img style="width: 100%;" src="./images/calligraphy.jpg">
+                            </div>
+                            <div class="nav_left" onclick="left()" onmouseover="change(1)" onmouseout="changeBack(1)">
+                                <i class="fas fa-chevron-left"></i>
+                            </div>
+                            <div class="nav_right" onclick="right()" onmouseover="change(2)" onmouseout="changeBack(2)">
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div id="hobbies_text_box">
+                                <div style="opacity: 0;" id="hobbies_heading"></div>
+                                <p id="hobbies_text">Best of my hobbies.<br />
+                                    Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive", Gothic Style" etc.
+                                </p>
+                            </div>
+                            <div id="my_pages">
+                                <a href="https://www.youtube.com/channel/UCREGyG0xdYSUBEjN7mjzv4Q" target="_blank"><img style="width: 25px" src="./images/youtube1.png"></a>
+                                <a href="https://medium.com/@rups20097" target="_blank"><img style="width: 25px" src="./images/medium.png"></a>
+                                <a href="https://www.fb.com/themoa.rupss" target="_blank"><img style="width: 25px" src="./images/fb.png"></a>
+                                <a href="https://www.instagram.com/mind_of_art_rupss/" target="_blank"><img style="width: 30px" src="./images/instagram.png"></a>
+                            </div>
+                        </div>
+                        <script>
+                            let top_color = 1;
+                            let set_to_calligraphy = true;
+                            let hobbies_text = [
+                                `Best of my hobbies.<br />
+                                    Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive", Gothic Style" etc.`,
+                                `It takes more than 5 hours to draw a portait but, <br />
+                                    This is the one thing always makes me positive and generate a beliefe that I do understand perfection even in a difficult work.`,
+                                `I love to write often.<br />
+                                    My quotes always come from my motivation and learning.<br />
+                                    Writing stories, poems are always fun for me and let me dive deep into my world of philosophies.`,
+                                `Vlogs and motivations.<br />
+                                    I belive vlogs are for them who love to open-up to share and motivational speeches are from my life inspirations.`,
+                            ];
+                            let hobbies_headings = ['Calligraphy', 'Portrait Sketch', 'Writings', 'YouTube'];
+                            let hobbies_pictures = [
+                                '<img style="width: 100%;" src="./images/calligraphy.jpg">',
+                                '<img style="width: 100%;" src="./images/evans.png">',
+                                '<img style="width: 100%;" src="./images/quote.png">',
+                                '<img style="width: 100%;" src="./images/youtube.png">'
+                            ];
+                            
+                            $(window).scroll(() => {
+                                if ($(window).scrollTop() > 2570 && set_to_calligraphy == true) {
+                                    set_to_calligraphy = false;
+                                    headerAnimation();
+                                }
+                            })
+                            function headerAnimation(x = 'Calligraphy') {
+                                $('#hobbies_heading').css('opacity', 1);
+                                $('#hobbies_heading').css('margin-left', 0);
+                                $('#hobbies_heading').text(x);
+                            }
+                            function change(i) {
+                                if (i == 1 ) {
+                                    $('.nav_left i').css('opacity', 1);
+                                } else {
+                                    $('.nav_right i').css('opacity', 1);
+                                }
+                            }
+                            function changeBack(i) {
+                                if (i == 1 ) {
+                                    $('.nav_left i').css('opacity', 0.6);
+                                } else {
+                                    $('.nav_right i').css('opacity', 0.6);
+                                }
+                            }
+
+                            function slide(i) {
+                                $('#hobbies_heading').css('opacity', 0);
+                                $('#hobbies_heading').css('transition', 'none');
+                                $('#hobbies_heading').css('margin-left', '50px');
+
+                                $('#hobbies_image_box').css('opacity', 0);
+
+
+                                $('#hobbies_text').css('opacity', 0);
+                                setTimeout(() => {
+                                    $('#hobbies_heading').css('transition', 'all 500ms ease');
+                                    $('#hobbies_heading').css('margin-left', 0);
+                                    $('#hobbies_heading').css('opacity', 1);
+                                    $('#hobbies_heading').text(hobbies_headings[i]);
+                                }, 100);
+                                setTimeout(() => {
+                                    $('#hobbies_image_box').css('opacity', 1);
+                                    $('#hobbies_image_box').html(hobbies_pictures[i]);
+                                    $('#hobbies_text').html(hobbies_text[i]);
+                                    $('#hobbies_text').css('opacity', 1);
+                                }, 350);
+                            }
+
+                            // ====================================================
+                            function change2(i) {
+                                if (i <= 4 && i >= 1) {
+                                    if (i == 1) {
+                                        $('.color1').css('left', '-100%');
+                                        $('.color2').css('left', '0');
+                                        $('.color3').css('left', '100%');
+                                        $('.color4').css('left', '200%');
+                                        top_color++;
+                                    } else if (i == 2) {
+                                        $('.color1').css('left', '-200%');
+                                        $('.color2').css('left', '-100%');
+                                        $('.color3').css('left', '0px');
+                                        $('.color4').css('left', '100%');
+                                        top_color++;
+                                    } else if (i == 3) {
+                                        $('.color1').css('left', '-300%');
+                                        $('.color2').css('left', '-200%');
+                                        $('.color3').css('left', '-100%');
+                                        $('.color4').css('left', '0px');
+                                        top_color++;
+                                    }
+                                    slide(top_color - 1);
+                                }
+                            }
+
+                            function change23(i) {
+                                if (i <= 4 && i >= 1) {
+                                    if (i == 4) {
+                                        $('.color1').css('left', '-200%');
+                                        $('.color2').css('left', '-100%');
+                                        $('.color3').css('left', '0%');
+                                        $('.color4').css('left', '100%');
+                                        top_color--;
+                                    } else if (i == 3) {
+                                        $('.color1').css('left', '-100%');
+                                        $('.color2').css('left', '0');
+                                        $('.color3').css('left', '100%');
+                                        $('.color4').css('left', '200%');
+                                        top_color--;
+                                    } else if (i == 2) {
+                                        $('.color1').css('left', '0px');
+                                        $('.color2').css('left', '100%');
+                                        $('.color3').css('left', '200%');
+                                        $('.color4').css('left', '300%');
+                                        top_color--;
+                                    }
+                                    slide(top_color - 1);
+                                }
+                            }
+
+                            function left() {
+                                if (top_color > 1)
+                                    change23(top_color)
+                            }
+                            function right() {
+                                if (top_color < 4)
+                                change2(top_color)
+                            }
+                        </script>
+                    </div>
+
+
+
+                    
+                </div>
+
+                <div class="c_section" style="">
+                        <div class="contact_section row">
+                            <div class="col-6" style="text-align: center;">
+                                <img style="opacity: 0.8;width: 80%;margin: 10px;" src="./images/contact_background.png">
+                            </div>
+                            <div class="col-6" style="position: relative;">
+                                <div class="contact_box">
+                                    <div class="contact_header">
+                                        GET IN TOUCH
+                                    </div>
+                                    <div class="contact_header2">I will really be happy to have your words</div>
+                                    <input placeholder="Write something to me" id="email_body" type="text"><br />
+                                    <button id="email_submit">Send</button>
+                                    <div class="follow_me">Follow me at
+                                        <!-- <div> -->
+                                            <a target="_blank" href="https://www.linkedin.com/in/rupam-basak-a24423115/"><img id="linkedin_img" src="./images/linkedin.png" alt=""></a>
+                                            <a target="_blank" href="https://www.facebook.com/rups20097"><img id="fb_img" src="./images/fb.png" alt=""></a>
+                                        <!-- </div> -->
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <!-- <i class="fas fa-envelope-open"></i> <input type="email"> -->
+
+                        </div>
+                </div>
+
+                
 
             </div>
         </section>

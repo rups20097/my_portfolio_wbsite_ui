@@ -8,11 +8,11 @@ body {
     color: white !important;
 }
 
-@media only screen and (max-width: 2000px) {
+/* @media only screen and (max-width: 2000px) {
     .follow_mid {
         width: 1500px;
     }
-}
+} */
 
 .fixed_nav {
     z-index: 99;
@@ -68,7 +68,7 @@ section {
 .my_img_shadow {
     z-index: -8;
     background-image: linear-gradient(#35A6C1, #323232);
-    opacity: 0.7;
+    opacity: 0.8;
     width: 100%;
     position: absolute;
     top: 0;
@@ -193,6 +193,40 @@ p {
 
   /* ============================================= Slide Tiles ====================================== */
 
+.tech_used {
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  height: 50px;
+}
+.tech_used #node_icon {
+  width: 90px;
+  height: 50px;
+}
+.tech_used #html_icon {
+  width: 35px;
+  height: 35px;
+}
+.tech_used #css_icon {
+  width: 25px;
+  height: 35px;
+}
+.tech_used #js_icon {
+  width: 60px;
+  height: 35px;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.tech_used #angular_icon {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+}
+.tech_used #android_icon {
+  margin-left: 10px;
+  width: 35px;
+  height: 35px;
+}
 
 .box1, .box2, .box3 {
     padding: 20px 30px;
@@ -254,4 +288,355 @@ p {
       border: 1px solid white !important; 
   } 
 
+  /* ================================================== SKILLS ========================================== */
+
+  .skill_cards {
+    width: 200px;
+    background-image: linear-gradient(to bottom right, white, #868686);
+    height: 200px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  .skill_cards.col-3 {
+    margin: 10px;
+  }
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  .tool_tip {
+    background: white;
+    color: black;
+    padding: 5px 10px;
+  }
   /* ================================================================================================ */
+
+  .client_quotes {
+      font-weight: 300;
+      position: relative;
+      height: 630px;
+  }
+
+  .client_image {
+    border-top-left-radius: 40px;
+    width: 90%;
+  }
+
+  .client_words {
+    background: indianred;
+    position: absolute;
+    top: 200px;
+    width: calc(84% - 1px);
+    padding: 25px 25px 15px 25px;
+    border-top-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  .client_words .words {
+    padding: 10px 10px 0 10px;
+    /* font-size: 14px; */
+  }
+
+  .client_details {
+      margin-top: 10px;
+      text-align: right;
+  }
+
+  .client_designation {
+      font-size: 12px;
+  }
+
+  .employee_words_box {
+      display: flex;
+      overflow-x: auto;
+  }
+  .employee_words {
+      margin: 30px;
+    /* font-size: 14px; */
+      font-weight: 300;
+      width: 300px;
+      flex: 0 0 auto;
+      background: #99A256;
+      padding: 40px 40px 20px;
+      border-top-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+  }
+
+  .employee_details {
+      font-size: 11px !important;
+      margin-top: 5px;
+      text-align: right;
+  }
+  .b1, .b2 {
+    width: 150px;
+    float: right;
+  }
+
+  /* =================================================================== */
+
+
+
+
+  #hobbies_text_box p {
+    font-weight: 300;
+    max-width: 1200px;
+    margin: auto;
+    transition: all 0.5s;
+  }
+
+  .nav_left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    background: #0000008e;
+    cursor: pointer;
+  }
+
+  .nav_left i {
+    top: 50%;
+    left: 35%;
+    position: absolute;
+    transition: all 0.3s;
+    opacity: 0.6;
+    font-size: 30px;
+  }
+
+  .nav_right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    background: #0000008e;
+    cursor: pointer;
+  }
+
+  .nav_right i {
+    font-size: 30px;
+    top: 50%;
+    left: 45%;
+    position: absolute;
+    transition: all 0.3s;
+    opacity: 0.6;
+  }
+
+  .slide_box {
+    height: 600px;
+  }
+
+  /* .color1 {
+    background-image: linear-gradient(to right, #BA8B02, #181818);
+  }
+  .color2 {
+    background-image: linear-gradient(to right, #181818, #3d72b4);
+  }
+  .color3 {
+    background-image: linear-gradient(to right, #3d72b4, #6A9113);
+  } */
+  
+
+  #hobbies_image_box {
+    width: 600px;
+    -webkit-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 22px 2px rgba(0,0,0,0.75);
+    position: absolute;
+    left: 10%;
+    top: 70px;
+    border: 20px solid white;
+    opacity: 1;
+    transition: all 300ms ease;
+}
+#hobbies_heading {
+    transition: all 500ms ease;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-weight: 200;
+    letter-spacing: 3px;
+  }
+
+  #hobbies_text {
+    transition: all 500ms ease;
+  }
+
+  #hobbies_text_box {
+    padding: 10px;
+    position: absolute;
+    width: 500px;
+    right: 12%;
+    top: 250px;
+  }
+  @media only screen and (max-width: 1600px) {
+    #hobbies_text_box {
+      right: 6%;
+    }
+    #hobbies_image_box {
+      left: 7%;
+    }
+  }
+
+
+
+  #back_box {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    /* border: 10px solid black; */
+    width: 100%;
+    height: 600px;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .color1, .color2, .color3, .color4 {
+    position: absolute;
+    display: block;
+    transition: all 0.8s ease;
+  /*   flex: 0 0 auto; */
+    height: 100%;
+    width: 100%;
+    z-index: -9;
+  }
+  .color1 {
+    left: 0px;
+    background-image: linear-gradient(to right, #BA8B02, #181818);
+  }
+  .color2 {
+    left: 100%;
+    background-image: linear-gradient(to right, #181818, #3d72b4);
+  }
+  .color3 {
+    left: 200%;
+    background-image: linear-gradient(to right, #3d72b4, #4e0000);
+  }
+  .color4 {
+    left: 300%;
+    background-image: linear-gradient(to right, #4e0000, #ad0000);
+  }
+
+  #my_pages {
+    position: absolute;
+    bottom: 0;
+    right: 90px;
+    margin: 10px;
+  }
+
+  .c_section {
+    width: 100%;
+    background-image: linear-gradient(#323232, #42a1cb);
+    margin-top: 131px;
+  }
+
+  .contact_section {
+    height: 100%;
+  }
+
+  .contact_section.row {
+    margin-right: 0 !important;
+  }
+  .contact_header {
+    font-size: 35px;
+    letter-spacing: 3px;
+    font-weight: 300;
+  }
+
+  .contact_header2 {
+    /* margin-top: 10px; */
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 500;
+  }
+  
+  #email_body {
+    outline: 0;
+    padding: 5px 0px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    width: 300px;
+    margin: 30px 0;
+    color: white;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  #email_submit {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    padding: 10px 50px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 0px;
+  }
+
+  #email_submit:active {
+    border: 1px solid white;
+  }
+  #email_submit:focus {
+    outline: 0;
+  }
+
+  ::placeholder { /* Most modern browsers support this now. */
+    color:    rgb(214, 214, 214);
+ }
+
+ .contact_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -150px 0 0 -150px;
+ }
+
+ .follow_me {
+  margin-top: 30px; font-size: 14px; font-weight: 300;
+ }
+
+ #linkedin_img {
+  width: 4%;
+  margin-left: 10px;
+  margin-top: -6px;
+  cursor: pointer;
+}
+
+#fb_img {
+ width: 4%;
+ margin-top: -6px;
+ cursor: pointer;
+}
