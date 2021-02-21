@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./my_page.css">
+    <link rel="stylesheet" href="./my_page_mobile.css">
     <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
     <script src="https://kit.fontawesome.com/16c892dcaa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -12,6 +13,7 @@
   src="https://code.jquery.com/jquery-3.5.1.min.js"
   integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
   crossorigin="anonymous"></script>
+  <script src="./my_page_mobile.js"></script>
 </head>
 <body>
         <div class="fixed_nav">
@@ -22,7 +24,7 @@
                 <li onclick="goto(1650)" class="navbar_li">Skills</li>
                 <li onclick="goto(2230)" class="navbar_li">Quotes</li>
                 <li onclick="goto(3420)" class="navbar_li">Hobbies</li>
-                <li onclick="goto(4500)" class="navbar_li">Contacts</li>
+                <li onclick="goto(4500)" class="navbar_li">Contact</li>
             </ul>
             <script>
                 function goto(y_axis) {
@@ -39,6 +41,36 @@
                 });
             </script>
         </div>
+
+        <div class="follow_mid">
+            <!-- <i class="fas fa-bars"></i> -->
+            <div class="dropdown ham_drop">
+                <a class="ham_btn btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i style="font-size: 20px;" class="fas fa-bars"></i>
+                </a>
+              
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Introduction</a>
+                  <a class="dropdown-item" href="#">Resume</a>
+                  <a class="dropdown-item" href="#">Projects</a>
+                  <a class="dropdown-item" href="#">Skills</a>
+                  <a class="dropdown-item" href="#">Quotes</a>
+                  <a class="dropdown-item" href="#">Hobbies</a>
+                  <a class="dropdown-item" href="#">Contact</a>
+                </div>
+              </div>
+              <script>
+                  $('.dropdown').click(() => {
+                      let x = $('.dropdown-menu').css('display');
+                      if (x == 'none') {
+                        $('.dropdown-menu').css('display', 'block')
+                      } else {
+                        $('.dropdown-menu').css('display', 'none')
+                      } 
+                  })
+              </script>
+        </div>
+
         <div class="image_box">
             <img class="my_img" src="./images/main_img.jpg">
             <div class="my_img_shadow"></div>
@@ -55,10 +87,10 @@
         <section style="margin-top: 40px;">
             <div class="follow_mid">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-xs-12 col-md-6">
                         <img class="my_main2_img" src="./images/my_main2.JPEG">
                     </div>
-                    <div class="col-6">
+                    <div id="change_view_for_mobile" class="col-xs-12 col-md-6">
                         <div style="margin-top: 100px;">
                             <div class="my_name m_b_20 font_w_light">Rupam Basak</div>
                             <div style="font-size: 20px;" class="m_b_20" >Software Engineer | Full-stack JS Developer | Artist</div>
@@ -78,8 +110,8 @@
             </div>
             <div id="cut_photo">
                 <div class="follow_mid">
-                    <div class="row">
-                        <div class="col-6" style="margin-top: 200px;">
+                    <div id="me_laptop_img_box" class="row">
+                        <div class="col-xs-12 col-md-6" style="margin-top: 200px;">
                             <div style="font-size: 30px;" class="m_b_20">Hello folks,</div>
                             <p class="m_b_20 font_w_light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             <a target="_blank" href="./files/CV_2020.pdf" download>    
@@ -90,7 +122,7 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="col-6" style="margin-top: 200px;">
+                        <div class="col-xs-12 col-md-6" style="margin-top: 200px;">
                             <img style="width: 100%; border-radius: 20px;" src="./images/me_laptop.JPEG">
                         </div>
                     </div>
@@ -100,7 +132,7 @@
                 <div class="header row" style="text-align: center; 
                 width: 1110px;
                 margin: 50px auto 20px;" class="">
-                    <div class="line col-5"></div><div class="col-2 header_name">Projects</div><div class="line col-5"></div>
+                    <div class="line col-3 col-md-5"></div><div class="col-6 col-md-2 header_name">Projects</div><div class="line col-3 col-md-5"></div>
                 </div>
 
                 <div class="follow_mid">
@@ -159,13 +191,26 @@
                             function makeSecond(cls) {
                                 $(`${cls}`).css('transform', 'scale(0.8)');
                                 $(`${cls}`).css('z-index', -50);
-                                $(`${cls}`).css('left', '250px');
+                                $( document ).ready(function() {
+                                    if ($(window).width() < 768) {
+                                        $(`${cls}`).css('left', '70px');
+                                    } else {
+                                        $(`${cls}`).css('left', '250px');
+                                    }
+                                });
+                                // $(`${cls}`).css('left', '250px');
                                 $(`${cls}`).css('opacity', 0.8);
                             }
                             function makeThird(cls) {
                                 $(`${cls}`).css('transform', 'scale(0.6)');
                                 $(`${cls}`).css('z-index', -99);
-                                $(`${cls}`).css('left', '400px');
+                                $(document).ready(function() {
+                                    if ($(window).width() < 768) {
+                                        $(`${cls}`).css('left', '130px');
+                                    } else {
+                                        $(`${cls}`).css('left', '400px');
+                                    }
+                                });
                                 $(`${cls}`).css('opacity', 0.5);
                             }
 

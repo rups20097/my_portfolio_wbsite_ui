@@ -1,0 +1,88 @@
+@media (min-width: 1280px) {
+    .dropdown.ham_drop {
+        display: none;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .follow_mid {
+        width: calc(100% - 40px);
+        margin: auto;
+    }
+    .fixed_nav {
+        display: none;
+    }
+    .ham_drop {
+        z-index: 9;
+        float: right;
+        margin-top: -25px;
+        background: transparent;
+    }
+    .ham_btn {
+        background: transparent;
+        border: 0 !important;
+    }
+    .ham_btn:focus {
+        border: 0 !important;
+    }
+    .dropdown-toggle::after {
+        display: none !important;
+    }
+    .dropdown-menu {
+        left: -119px !important;
+    }
+    .dropdown-item {
+        padding: 10px 15px !important;
+    }
+    .dropdown-item.active, .dropdown-item:active {
+        background-color: #52525275 !important;
+    }
+    .my_main2_img {
+        display: none;
+    }
+    .my_img {
+        width: 400%;
+        position: absolute;
+        left: initial;
+        top: 0;
+        z-index: -9;
+        right: 0px;
+    }
+    .my_img_shadow {
+        height: 700px;
+        z-index: 0;
+        opacity: 0.9;
+    }
+
+    .row {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+    .img_margin {
+        margin-top: 100px !important;
+    }
+    #download_cv {
+        width: 60%;
+        padding: 15px;
+        margin: 0 20%;
+    }
+      .box2 {
+        left: 70px;
+      }
+      .box3 {
+        left: 130px;
+      }
+    .box1, .box2, .box3 {
+        padding: 20px 30px;
+        border-radius: 10px;
+        width: 300px;
+        height: 400px;
+      }
+    .card_body {
+        font-size: 12px;
+    }
+    .b1, .b2 {
+        margin-top: -90px;
+    }
+}
