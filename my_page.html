@@ -385,7 +385,7 @@
                     <div class="subheader">Clients' Word</div>
                     <div class="client_quotes row">
                         <div class="col-md-1"></div>
-                        <div class="col-12 col-md-5">
+                        <div id="xxx" class="col-12 col-md-5">
                             <img class="client_image" src="./images/img1.png">
                             <div class="client_words" style="background: #A25699;">
                                 <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
@@ -408,7 +408,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-md-5 change_to_slide">
+                        <div id="yyy" class="col-12 col-md-5 change_to_slide">
                             <img class="client_image" src="./images/img2.png">
                             <div class="client_words" style="background: #8256A2;">
                                 <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
@@ -524,6 +524,19 @@
                             </div>
                         </div>
                         <script>
+                            (function() {
+                                // let x = document.getElementById('xxx').offsetTop;
+                                if (window.innerWidth < 768) {
+                                    let y = document.getElementById('yyy').offsetTop;
+                                    $('#yyy').css('margin-top', `-${y}px`);
+                                    
+                                    let x_width = $('#xxx img').css('width');
+                                    let w = parseInt(x_width.split('px')[0]) + 20
+                                    console.log('x_width', x_width)
+                                    $('#yyy').css('left', `${w}px`);
+                                }
+                            })()
+
                             let top_color = 1;
                             let set_to_calligraphy = true;
                             let hobbies_text = [
