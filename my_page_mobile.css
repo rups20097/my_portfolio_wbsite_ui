@@ -85,4 +85,90 @@
     .b1, .b2 {
         margin-top: -90px;
     }
+    .skill_cards {
+        padding: 10px;
+        height: 10vh;
+    }
+    .change_to_slide {
+        top: -312px;
+        left: 330px;
+    }
+
+    .client_quotes {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+    .client_words {
+        font-size: 14px !important;
+    }
+    #inverted_commas {
+        height: 18px;
+    }
+    .employee_words {
+        margin: 10px;
+        font-size: 14px;
+        font-weight: 300;
+        width: 250px;
+        flex: 0 0 auto;
+        background: #99A256;
+        padding: 30px 30px 10px;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
+    .nav_left, .nav_right {
+        width: 40px;
+        /* height: 316px; */
+        top: 316px;
+        bottom: 0;
+        background: none;
+        z-index: 9;
+    }
+    #back_box {
+        /* height: 550px; */
+    }
+    #hobbies_image_box {
+        left: 0;
+        width: auto;
+        border: 5px solid white;
+        margin: 10px;
+        top: 10px;
+    }
+    #hobbies_text {
+        font-size: 14px;
+    }
+    #hobbies_text_box {
+        right: 0;
+        top: 325px;
+        /* bottom: 30px; */
+        width: 90%;
+        left: 30px;
+        padding: 10px 20px
+    }
+    #hobbies_heading {
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+    #my_pages {
+        right: 55px;
+    }
+    #my_pages a img {
+        width: 20px !important;
+        margin-right: 10px;
+    }
+    .c_section {
+        height: 280px;
+        margin-top: 70px;
+    }
+    .contact_box {
+        margin: -150px 0 0 -125px;
+     }
+    .contact_header {
+        font-size: 25px;
+    }
+    #email_body {
+        margin: 25px 0;
+    }
+    #linkedin_img, #fb_img {
+        width: 15%;
+    }
 }

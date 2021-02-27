@@ -4,7 +4,8 @@ html {
 
 body {
     background: #323232 !important;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Roboto', sans-serif !important;
     color: white !important;
 }
 
@@ -303,7 +304,7 @@ p {
   }
 
   .skill_cards.col-3 {
-    margin: 10px;
+    margin: 10px 0;
   }
   .tooltip .tooltiptext {
     visibility: hidden;
@@ -589,7 +590,7 @@ p {
     background: transparent;
     border: 0;
     border-bottom: 1px solid white;
-    width: 300px;
+    width: 200px;
     margin: 30px 0;
     color: white;
     font-size: 14px;
@@ -622,6 +623,7 @@ p {
   top: 50%;
   left: 50%;
   margin: -150px 0 0 -150px;
+  width: 200px;
  }
 
  .follow_me {
