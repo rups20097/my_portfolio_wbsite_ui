@@ -3,35 +3,26 @@
         display: none;
     }
 }
-
-/* @media (max-width: 390px) {
-    .box1, .box2, .box3 {
-        width: 250px !important;
+@media (max-width: 390px) {
+    a.dropdown-item {
+        font-size: 13px;
+        padding: 10px 15px !important;
     }
+    .my_name {
+        font-size: 40px;
+    }
+    a#dropdownMenuLink {
+        border: 0 !important;
+    }
+
     .client_words .words {
         font-size: 13px;
     }
-    .employee_words {
-        font-size: 13px !important;
-    }
-    #hobbies_text {
-        font-size: 13px !important;
-    }
-    #hobbies_heading {
-        font-size: 28px !important;
-    }
-    #hobbies_text_box {
-        top: 300px !important   ;
-    }
     #back_box {
-        height: 550px
+        height: 550px;
     }
-} */
 
-@media (max-width: 768px) and (min-width: 390px) {
-    a.dropdown-item {
-        font-size: 14px;
-    }
+
     .header_name {
         font-size: 30px;
     }
@@ -107,7 +98,7 @@
     .box1, .box2, .box3 {
         padding: 20px 30px;
         border-radius: 10px;
-        width: 300px;
+        width: 250px;
         height: 400px;
       }
     .card_body {
@@ -139,7 +130,7 @@
     }
     .employee_words {
         margin: 10px;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 300;
         width: 250px;
         flex: 0 0 auto;
@@ -167,11 +158,11 @@
         top: 10px;
     }
     #hobbies_text {
-        font-size: 14px;
+        font-size: 13px;
     }
     #hobbies_text_box {
         right: 0;
-        top: 340px;
+        top: 300px;
         /* bottom: 30px; */
         width: 90%;
         left: 30px;
@@ -179,7 +170,7 @@
     }
     #hobbies_heading {
         margin-bottom: 20px;
-        font-size: 35px;
+        font-size: 28px;
     }
     #my_pages {
         right: 55px;
@@ -216,9 +207,6 @@
     }
     .svg_img {
         opacity: 0.4 !important;
-    }
-    a#dropdownMenuLink {
-        border: 0 !important;
     }
     
 }

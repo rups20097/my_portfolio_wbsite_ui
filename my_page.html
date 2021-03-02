@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./my_page.css">
     <link rel="stylesheet" href="./my_page_mobile.css">
+    <link rel="stylesheet" href="./my_page_mobile_small.css">
     <!-- <script src="https://apis.google.com/js/platform.js"></script> -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
@@ -47,7 +48,7 @@
         <div class="follow_mid">
             <!-- <i class="fas fa-bars"></i> -->
             <div class="dropdown ham_drop">
-                <a class="ham_btn btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="ham_btn btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <i style="font-size: 20px;" class="fas fa-bars"></i>
                 </a>
               
@@ -384,7 +385,7 @@
                 <div class="follow_mid">
                     <div class="subheader">Clients' Word</div>
                     <div class="client_quotes row">
-                        <div class="col-md-1"></div>
+                        <div id="vanish_for_phone" class="col-md-1"></div>
                         <div id="xxx" class="col-12 col-md-5">
                             <img class="client_image" src="./images/img1.png">
                             <div class="client_words" style="background: #A25699;">
@@ -431,7 +432,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-1"></div>
+                        <div id="vanish_for_phone" class="col-md-1"></div>
                     </div>
 
                     <div class="subheader">Employees' Word</div>
@@ -676,10 +677,10 @@
 
                 <div class="c_section" style="">
                         <div class="contact_section row">
-                            <div class="col-6" style="text-align: center;">
-                                <img style="opacity: 0.8;width: 80%;margin: 10px;" src="./images/contact_background.png">
+                            <div class="col-12 col-md-6" style="text-align: center;">
+                                <img class="svg_img" style="opacity: 0.8;width: 80%;margin: 10px;" src="./images/contact_background.png">
                             </div>
-                            <div class="col-6" style="position: relative;">
+                            <div class="col-12 col-md-6" style="position: relative;">
                                 <div class="contact_box">
                                     <div class="contact_header">
                                         GET IN TOUCH
