@@ -84,10 +84,24 @@
     .img_margin {
         margin-top: 100px !important;
     }
-    #download_cv {
-        width: 60%;
-        padding: 15px;
+    .cv_area a {
+        display: inline-block;
         margin: 0 20%;
+        width: 60%;
+     }
+     .cv_area a:link, a:visited {
+        display: inline-block;
+        margin: 0 20%;
+        width: 60%;
+     }
+     .cv_area a:hover, a:focus, a:active {
+        display: inline-block;
+        margin: 0 20%;
+        width: 60%;
+     }
+    #download_cv {
+        width: 100%;
+        padding: 15px;
     }
       .box2 {
         left: 70px;
@@ -124,6 +138,7 @@
     }
     .client_words {
         font-size: 14px !important;
+        padding: 20px 20px 15px 20px;
     }
     #inverted_commas {
         height: 18px;
@@ -209,4 +224,19 @@
         opacity: 0.4 !important;
     }
     
+    .hit_like_box {
+        left: calc(50% - 150px);
+        width: 300px !important;
+    }
+    .like_texts {
+        padding: 10px;
+        margin-top: 0;
+    }
+    .like_texts h1 {
+        font-size: 30px;
+    }
+    .like_img {
+        margin: 10px 0 10px 10px;
+        width: 50% !important;
+    }
 }

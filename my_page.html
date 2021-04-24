@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./my_page.css">
@@ -9,704 +10,849 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/16c892dcaa.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script
-  src="https://code.jquery.com/jquery-3.5.1.min.js"
-  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
-  crossorigin="anonymous"></script>
-  <script src="./my_page_mobile.js"></script>
+    <title>Rupam Basak - portfolio website</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./my_page_mobile.js"></script>
 </head>
+
 <body>
-        <div class="fixed_nav">
-            <ul class="navbar_ul">
-                <li onclick="goto(0)" class="navbar_li">Introduction</li>
-                <li onclick="goto(450)" class="navbar_li">Resume</li>
-                <li onclick="goto(1000)" class="navbar_li">Projects</li>
-                <li onclick="goto(1650)" class="navbar_li">Skills</li>
-                <li onclick="goto(2230)" class="navbar_li">Quotes</li>
-                <li onclick="goto(3420)" class="navbar_li">Hobbies</li>
-                <li onclick="goto(4500)" class="navbar_li">Contact</li>
-            </ul>
-            <script>
-                function goto(y_axis) {
-                    window.scrollTo(0, y_axis);
-                }
+    <div class="fixed_nav">
+        <ul class="navbar_ul">
+            <li onclick="goto(0)" class="navbar_li">Introduction</li>
+            <li onclick="goto(450)" class="navbar_li">Resume</li>
+            <li onclick="goto(1000)" class="navbar_li">Projects</li>
+            <li onclick="goto(1650)" class="navbar_li">Skills</li>
+            <li onclick="goto(2230)" class="navbar_li">Quotes</li>
+            <li onclick="goto(3420)" class="navbar_li">Hobbies</li>
+            <li onclick="goto(4500)" class="navbar_li">Contact</li>
+        </ul>
+        <script>
+            function goto(y_axis) {
+                console.log('YES YES YES')
+                window.scrollTo(0, y_axis);
+            }
 
-                $(function () {
+            $(function () {
+                var $nav = $(".fixed_nav");
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                $(document).scroll(function () {
                     var $nav = $(".fixed_nav");
-                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-                    $(document).scroll(function () {
-                        var $nav = $(".fixed_nav");
-                        $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-                    });
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
                 });
-            </script>
-        </div>
+            });
+        </script>
+    </div>
 
-        <div class="follow_mid">
-            <!-- <i class="fas fa-bars"></i> -->
-            <div class="dropdown ham_drop">
-                <a class="ham_btn btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <i style="font-size: 20px;" class="fas fa-bars"></i>
-                </a>
-              
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <a class="dropdown-item" href="#">Introduction</a>
-                  <a class="dropdown-item" href="#">Resume</a>
-                  <a class="dropdown-item" href="#">Projects</a>
-                  <a class="dropdown-item" href="#">Skills</a>
-                  <a class="dropdown-item" href="#">Quotes</a>
-                  <a class="dropdown-item" href="#">Hobbies</a>
-                  <a class="dropdown-item" href="#">Contact</a>
-                </div>
-              </div>
-              <script>
-                  $('.dropdown').click(() => {
-                      let x = $('.dropdown-menu').css('display');
-                      if (x == 'none') {
-                        $('.dropdown-menu').css('display', 'block')
-                      } else {
-                        $('.dropdown-menu').css('display', 'none')
-                      } 
-                  })
-              </script>
-        </div>
+    <div class="follow_mid">
+        <!-- <i class="fas fa-bars"></i> -->
+        <div class="dropdown ham_drop">
+            <a class="ham_btn btn btn-secondary dropdown-toggle" role="button" id="dropdownMenuLink"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i style="font-size: 20px;" class="fas fa-bars"></i>
+            </a>
 
-        <div class="image_box">
-            <img class="my_img" src="./images/main_img.jpg">
-            <div class="my_img_shadow"></div>
-            <script>
-                $(window).on('load', () => {
-                    $('.my_img_shadow').height(`${$('.my_img').height()}`);
-                });
-                $(window).resize(() => {
-                    let h = $('.my_img').height();
-                    $('.my_img_shadow').height(`${h}`);
-                })
-            </script>
-        </div>
-        <section style="margin-top: 40px;">
-            <div class="follow_mid">
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <img class="my_main2_img" src="./images/my_main2.JPEG">
-                    </div>
-                    <div id="change_view_for_mobile" class="col-xs-12 col-md-6">
-                        <div style="margin-top: 100px;">
-                            <div class="my_name m_b_20 font_w_light">Rupam Basak</div>
-                            <div style="font-size: 20px;" class="m_b_20" >Software Engineer | Full-stack JS Developer | Artist</div>
-                            <div style="font-size: 16px;" class="m_b_20 font_w_light" >2.5 years of experience specialising in Application Development
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
-                            </div>
-                            <div style="font-size: 16px;" class="m_b_20 font_w_light" >Currently working at <span onclick="gotocompany()" class="company_name">Mantra Labs</span>
-                            </div>
-                            <script>
-                                function gotocompany() {
-                                    window.open('https://www.mantralabsglobal.com');
-                                }
-                            </script>
-                        </div>
-                    </div>
-                </div>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <a class="dropdown-item" href="#">Introduction</a>
+                <a class="dropdown-item" onclick="goto(950)">Resume</a>
+                <a class="dropdown-item" onclick="goto(1500)">Projects</a>
+                <a class="dropdown-item" onclick="goto(2000)">Skills</a>
+                <a class="dropdown-item" onclick="goto(2500)">Quotes</a>
+                <a class="dropdown-item" onclick="goto(3550)">Hobbies</a>
+                <a class="dropdown-item" onclick="goto(4550)">Contact</a>
             </div>
-            <div id="cut_photo">
-                <div class="follow_mid">
-                    <div id="me_laptop_img_box" class="row">
-                        <div class="col-xs-12 col-md-6" style="margin-top: 200px;">
-                            <div style="font-size: 30px;" class="m_b_20">Hello folks,</div>
-                            <p class="m_b_20 font_w_light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <a target="_blank" href="./files/CV_2020.pdf" download>    
-                                <button id="download_cv" class="cv_btn">Download CV
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15.674" height="16.762" viewBox="0 0 15.674 16.762">
-                                        <path id="download" d="M6.98,18H20.694a.887.887,0,1,1,0,1.764H6.98A.887.887,0,1,1,6.98,18Zm7.837-5.139L17.993,10l1.385,1.247-5.541,4.991L8.295,11.246,9.68,10l3.177,2.861V3h1.959v9.859Z" transform="translate(-6 -3)" fill="#fff" fill-rule="evenodd"/>
-                                    </svg>                                  
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-6" style="margin-top: 200px;">
-                            <img style="width: 100%; border-radius: 20px;" src="./images/me_laptop.JPEG">
-                        </div>
-                    </div>
+        </div>
+        <script>
+            $('.dropdown').click(() => {
+                let x = $('.dropdown-menu').css('display');
+                if (x == 'none') {
+                    $('.dropdown-menu').css('display', 'block')
+                } else {
+                    $('.dropdown-menu').css('display', 'none')
+                }
+            })
+        </script>
+    </div>
+
+    <div class="image_box">
+        <img class="my_img" src="./images/main_img.jpg">
+        <div class="my_img_shadow"></div>
+        <script>
+            $(window).on('load', () => {
+                $('.my_img_shadow').height(`${$('.my_img').height() + 10}`);
+            });
+            $(window).resize(() => {
+                let h = $('.my_img').height() + 10;
+                $('.my_img_shadow').height(`${h}`);
+            })
+        </script>
+    </div>
+    <section style="margin-top: 40px;">
+        <div class="follow_mid">
+            <div class="row">
+                <div class="col-xs-12 col-md-6">
+                    <img class="my_main2_img" src="./images/my_main2.JPEG">
                 </div>
-
-
-                <div class="header row" style="text-align: center; 
-                width: 1110px;
-                margin: 50px auto 20px;" class="">
-                    <div class="line col-3 col-md-5"></div><div class="col-6 col-md-2 header_name">Projects</div><div class="line col-3 col-md-5"></div>
-                </div>
-
-                <div class="follow_mid">
-                    <div id="subheader_projects" class="subheader">Client's Projects</div>
-                    <div style="text-align: right;">
-                        <div style="margin-bottom: 10px; color: #8c8c8c;">start / stop animation and click on tiles</div>
-                        <button class="btn b1" onclick="start()">Start Animation</button>
-                        <button class="btn b2" style="" onclick="stop()">Stop</button>
-                    </div>
-
-                      <div id="all_here" style="position: relative;">
-                        <div onclick="comeFirst(1)" class='box1'>
-                            <div class="card_header">Abbvie Inc.</div>
-                            <div class="card_body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                                sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="tech_used">
-                                <img id="node_icon" src="./images/nodejs.png">
-                                <img id="html_icon" src="./images/html5.png">
-                                <img id="css_icon" src="./images/css.png">
-                                <img id="js_icon" src="./images/Javascript.png">
-                            </div>
+                <div id="change_view_for_mobile" class="col-xs-12 col-md-6">
+                    <div style="margin-top: 100px;">
+                        <div class="my_name m_b_20 font_w_light">Rupam Basak</div>
+                        <div style="font-size: 20px;" class="m_b_20">Software Engineer | Full-stack JS Developer |
+                            Artist</div>
+                        <div style="font-size: 16px;" class="m_b_20 font_w_light">2.5 years of experience specialising
+                            in Application Development
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam
                         </div>
-                        <div onclick="comeFirst(2)" class='box2'>
-                            <div class="card_header">Apollo AR</div>
-                            <div class="card_body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="tech_used">
-                                <img id="node_icon" src="./images/nodejs.png">
-                                <img id="angular_icon" src="./images/angular.png">
-                            </div>
-                        </div>
-                        <div onclick="comeFirst(3)" class='box3'>
-                            <div class="card_header">Location Tracker</div>
-                            <div class="card_body">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                            <div class="tech_used">
-                                <img id="node_icon" src="./images/nodejs.png">
-                                <img id="android_icon" src="./images/android.png">
-                            </div>
-                        </div>
-                      </div>
-
-                      <script>
-                            function makeFirst(cls) {
-                                $(`${cls}`).css('transform', 'scale(1)');
-                                $(`${cls}`).css('z-index', 1);
-                                $(`${cls}`).css('left', 0);
-                                $(`${cls}`).css('opacity', 1);
-                            }
-                            function makeSecond(cls) {
-                                $(`${cls}`).css('transform', 'scale(0.8)');
-                                $(`${cls}`).css('z-index', -50);
-                                $( document ).ready(function() {
-                                    if ($(window).width() < 768) {
-                                        $(`${cls}`).css('left', '70px');
-                                    } else {
-                                        $(`${cls}`).css('left', '250px');
-                                    }
-                                });
-                                // $(`${cls}`).css('left', '250px');
-                                $(`${cls}`).css('opacity', 0.8);
-                            }
-                            function makeThird(cls) {
-                                $(`${cls}`).css('transform', 'scale(0.6)');
-                                $(`${cls}`).css('z-index', -99);
-                                $(document).ready(function() {
-                                    if ($(window).width() < 768) {
-                                        $(`${cls}`).css('left', '130px');
-                                    } else {
-                                        $(`${cls}`).css('left', '400px');
-                                    }
-                                });
-                                $(`${cls}`).css('opacity', 0.5);
-                            }
-
-                            function shirkTile(cls) {
-                                $(`${cls}`).css('transform', 'scale(0.0)');
-                                $(`${cls}`).css('z-index', -99);
-                                $(`${cls}`).css('opacity', 0.5);
-                                $(`${cls}`).css('left', 0);
-                            }
-
-                            let topTile = 1;
-                            function comeFirst(n) {
-                            if (n == 2) {
-                                $('#subheader_projects').text('Client\'s Projects');
-                                if (topTile == 1) {
-                                    shirkTile('.box1');
-                                    makeFirst('.box2');
-                                    setTimeout(() => {
-                                        makeSecond('.box3');
-                                    }, 300);
-                                    setTimeout(() => {
-                                        makeThird('.box1');
-                                    }, 400)
-                                    } else if (topTile == 3) {
-                                    shirkTile('.box3');
-                                    shirkTile('.box1');
-                                    makeFirst('.box2');
-                                    setTimeout(() => {
-                                        makeSecond('.box3');
-                                    },300);
-                                    setTimeout(() => {
-                                        makeThird('.box1');
-                                    }, 400)
-                                }
-                            }
-                            if (n == 3) {
-                                $('#subheader_projects').text('Self Project');
-                                if (topTile == 1) {
-                                    shirkTile('.box2');
-                                    shirkTile('.box1');
-                                    makeFirst('.box3');
-                                    setTimeout(() => {
-                                        makeSecond('.box1');
-                                    },300);
-                                    setTimeout(() => {
-                                        makeThird('.box2');
-                                    }, 400)
-                                    } else if (topTile == 2) {
-                                    shirkTile('.box2');
-                                    makeFirst('.box3');
-                                    setTimeout(() => {
-                                        makeSecond('.box1');
-                                    }, 300)
-                                    setTimeout(() => {
-                                        makeThird('.box2');
-                                    }, 400)
-                                }
-                            }
-                            if (n == 1) {
-                                $('#subheader_projects').text('Client\'s Projects');
-                                if (topTile == 2) {
-                                    shirkTile('.box2');
-                                    shirkTile('.box3');
-                                    makeFirst('.box1');
-                                    setTimeout(() => {
-                                        makeSecond('.box2');
-                                    }, 300);
-                                    setTimeout(() => {
-                                        makeThird('.box3');
-                                    }, 400)
-                                    } else if (topTile == 3) {
-                                    shirkTile('.box3');
-                                    makeFirst('.box1');
-                                    setTimeout(() => {
-                                        makeSecond('.box2');
-                                    }, 300)
-                                    setTimeout(() => {
-                                        makeThird('.box3');
-                                    }, 400)
-                                }
-                            }
-                            topTile = n;
-                            }
-
-                            function starts() {
-                                let i = 2;
-                                return function () {
-                                    comeFirst(i);
-                                    if (i + 1 > 3) {
-                                        i = 1;
-                                    } else {
-                                        i += 1;
-                                    }
-                                }
-                            }
-
-                            let x;
-
-                            (function() {
-                                $('#all_here').css('pointer-events', 'none')
-                                $('.b1').css('display', 'none')
-                                $('.b2').css('display', 'block')
-                                let loop = starts();
-                                x = setInterval(loop, 3000)
-                            })();
-
-                            function start() {
-                                $('#all_here').css('pointer-events', 'none')
-                                $('.b1').css('display', 'none');
-                                $('.b2').css('display', 'block');
-                                let loop = starts();
-                                x = setInterval(loop, 3000)
-                            }
-
-                            function stop() {
-                                $('#all_here').css('pointer-events', 'all')
-                                $('.b1').css('display', 'block')
-                                $('.b2').css('display', 'none')
-                                clearInterval(x);
-                            }
-                      </script>
-                </div>
-
-                <div class="header row" style="text-align: center; 
-                width: 1110px;
-                margin: 500px auto 20px;" class="">
-                    <div class="line col-3 col-md-4"></div><div class="col-6 col-md-4 header_name" style="padding: 0 !important;">Technical Skills</div><div class="line col-3 col-md-4"></div>
-                </div>
-                <div class="follow_mid">
-                    <div class="row">
-                        <div class="skill_cards col-3">
-                            <img style="width: 100%;" src="./images/sailsjs.png">
-                        </div>
-                        <div class="col-1">
-                        </div>
-                        <div class="skill_cards col-3">
-                            <img style="height: 100%;" src="./images/html5.png">
-                        </div>
-                        <div class="col-1">
-                        </div>
-                        <div class="skill_cards col-3">
-                            <img style="height: 100%;" src="./images/css.png">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="skill_cards col-3">
-                            <img style="height: 100%; " src="./images/Javascript.png">
-                        </div>
-                        <div class="col-1">
-                        </div>
-                        <div class="skill_cards col-3">
-                            <img style="height: 100%;" src="./images/angular.png">
-                        </div>
-                        <div class="col-1">
-                        </div>
-                        <div class="skill_cards col-3">
-                            <img style="height: 100%;" src="./images/android.png">
-                        </div>
-                        <!-- <div class="tool_tip">Hover over me</div> -->
-                    </div>
-                </div>
-
-                <div class="header row" style="text-align: center; 
-                width: 1110px;
-                margin: 50px auto 20px;" class="">
-                    <div class="line col-3 col-md-5"></div><div class="col-6 col-md-2 header_name">Quotes</div><div class="line col-3 col-md-5"></div>
-                </div>
-
-                <div class="follow_mid">
-                    <div class="subheader">Clients' Word</div>
-                    <div class="client_quotes row">
-                        <div id="vanish_for_phone" class="col-md-1"></div>
-                        <div id="xxx" class="col-12 col-md-5">
-                            <img class="client_image" src="./images/img1.png">
-                            <div class="client_words" style="background: #A25699;">
-                                <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
-                                    <g id="quotes" transform="translate(-4.5 -6.75)">
-                                    <path id="Path_2" data-name="Path 2" d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z" fill="#fff"/>
-                                    <path id="Path_3" data-name="Path 3" d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z" transform="translate(7.34)" fill="#fff"/>
-                                    </g>
-                                </svg>
-                                
-                                <div class="words">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-
-                                    <div class="client_details">
-                                        <div>Gyan P Srivastav</div>
-                                        <div class="client_designation">Scientific Engineer<br />
-                                        Abbvie Inc.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="yyy" class="col-12 col-md-5 change_to_slide">
-                            <img class="client_image" src="./images/img2.png">
-                            <div class="client_words" style="background: #8256A2;">
-                                <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281" viewBox="0 0 34.339 23.281">
-                                    <g id="quotes" transform="translate(-4.5 -6.75)">
-                                    <path id="Path_2" data-name="Path 2" d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z" fill="#fff"/>
-                                    <path id="Path_3" data-name="Path 3" d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z" transform="translate(7.34)" fill="#fff"/>
-                                    </g>
-                                </svg>
-                                
-                                <div class="words">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
-
-                                    <div class="client_details">
-                                        <div>Gyan P Srivastav</div>
-                                        <div class="client_designation">Scientific Engineer<br />
-                                        Abbvie Inc.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="vanish_for_phone" class="col-md-1"></div>
-                    </div>
-
-                    <div class="subheader">Employees' Word</div>
-                    <div class="employee_words_box">
-                        <div class="employee_words">
-                            <div class="words">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                                <div class="employee_details">
-                                    <div style="font-size: 12px;">Sayon Mozumder</div>
-                                    <div style="">iOS developer<br />
-                                    Company Name</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="employee_words" style="background-color: #A25670;">
-                            <div class="words">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                                <div class="employee_details">
-                                    <div style="font-size: 12px;">Sayon Mozumder</div>
-                                    <div style="">iOS developer<br />
-                                    Company Name</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="employee_words" style="background-color: #A25656;">
-                            <div class="words">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                                <div class="employee_details">
-                                    <div style="font-size: 12px;">Sayon Mozumder</div>
-                                    <div style="">iOS developer<br />
-                                    Company Name</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="employee_words" style="background-color: #a29956;">
-                            <div class="words">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-
-                                <div class="employee_details">
-                                    <div style="font-size: 12px;">Sayon Mozumder</div>
-                                    <div style="">iOS developer<br />
-                                    Company Name</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="header row" style="text-align: center; 
-                width: 1110px;
-                margin: 50px auto 20px;" class="">
-                    <div class="line col-3 col-md-5"></div><div class="col-6 col-md-2 header_name">Hobbies</div><div class="line col-3 col-md-5"></div>
-                </div>
-
-                <div style="margin-bottom: 50px;">
-
-
-                    <div id="back_box">
-                        <div class="color1"></div>
-                        <div class="color2"></div>
-                        <div class="color3"></div>
-                        <div class="color4"></div>
-                        
-                        <!-- <div class="" style="position: relative;"> -->
-                        <div class="">
-                            <div id="hobbies_image_box">
-                                <img style="width: 100%;" src="./images/calligraphy.jpg">
-                            </div>
-                            <div class="nav_left" onclick="left()" onmouseover="change(1)" onmouseout="changeBack(1)">
-                                <i class="fas fa-chevron-left"></i>
-                            </div>
-                            <div class="nav_right" onclick="right()" onmouseover="change(2)" onmouseout="changeBack(2)">
-                                <i class="fas fa-chevron-right"></i>
-                            </div>
-                            <div id="hobbies_text_box">
-                                <div style="opacity: 0;" id="hobbies_heading"></div>
-                                <p id="hobbies_text">Best of my hobbies.<br />
-                                    Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive", Gothic Style" etc.
-                                </p>
-                            </div>
-                            <div id="my_pages">
-                                <a href="https://www.youtube.com/channel/UCREGyG0xdYSUBEjN7mjzv4Q" target="_blank"><img style="width: 25px" src="./images/youtube1.png"></a>
-                                <a href="https://medium.com/@rups20097" target="_blank"><img style="width: 25px" src="./images/medium.png"></a>
-                                <a href="https://www.fb.com/themoa.rupss" target="_blank"><img style="width: 25px" src="./images/fb.png"></a>
-                                <a href="https://www.instagram.com/mind_of_art_rupss/" target="_blank"><img style="width: 30px" src="./images/instagram.png"></a>
-                            </div>
+                        <div style="font-size: 16px;" class="m_b_20 font_w_light">Currently working at <span
+                                onclick="gotocompany()" class="company_name">Mantra Labs</span>
                         </div>
                         <script>
-                            // (function() {
-                            //     // let x = document.getElementById('xxx').offsetTop;
-                            //     if (window.innerWidth < 768) {
-                            //         let y = document.getElementById('yyy').offsetTop;
-                            //         $('#yyy').css('margin-top', `-${y}px`);
-                                    
-                            //         let x_width = $('#xxx img').css('width');
-                            //         let w = parseInt(x_width.split('px')[0]) + 20
-                            //         console.log('x_width', x_width)
-                            //         $('#yyy').css('left', `${w}px`);
-                            //     }
-                            // })()
-
-                            let top_color = 1;
-                            let set_to_calligraphy = true;
-                            let hobbies_text = [
-                                `Best of my hobbies.<br />
-                                    Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive", Gothic Style" etc.`,
-                                `It takes more than 5 hours to draw a portait but, <br />
-                                    This is the one thing always makes me positive and generate a beliefe that I do understand perfection even in a difficult work.`,
-                                `I love to write often.<br />
-                                    My quotes always come from my motivation and learning.<br />
-                                    Writing stories, poems are always fun for me and let me dive deep into my world of philosophies.`,
-                                `Vlogs and motivations.<br />
-                                    I belive vlogs are for them who love to open-up to share and motivational speeches are from my life inspirations.`,
-                            ];
-                            let hobbies_headings = ['Calligraphy', 'Portrait Sketch', 'Writings', 'YouTube'];
-                            let hobbies_pictures = [
-                                '<img style="width: 100%;" src="./images/calligraphy.jpg">',
-                                '<img style="width: 100%;" src="./images/evans.png">',
-                                '<img style="width: 100%;" src="./images/quote.png">',
-                                '<img style="width: 100%;" src="./images/youtube.png">'
-                            ];
-                            
-                            $(window).scroll(() => {
-                                if ($(window).scrollTop() > 2570 && set_to_calligraphy == true) {
-                                    set_to_calligraphy = false;
-                                    headerAnimation();
-                                }
-                            })
-                            function headerAnimation(x = 'Calligraphy') {
-                                $('#hobbies_heading').css('opacity', 1);
-                                $('#hobbies_heading').css('margin-left', 0);
-                                $('#hobbies_heading').text(x);
-                            }
-                            function change(i) {
-                                if (i == 1 ) {
-                                    $('.nav_left i').css('opacity', 1);
-                                } else {
-                                    $('.nav_right i').css('opacity', 1);
-                                }
-                            }
-                            function changeBack(i) {
-                                if (i == 1 ) {
-                                    $('.nav_left i').css('opacity', 0.6);
-                                } else {
-                                    $('.nav_right i').css('opacity', 0.6);
-                                }
-                            }
-
-                            function slide(i) {
-                                $('#hobbies_heading').css('opacity', 0);
-                                $('#hobbies_heading').css('transition', 'none');
-                                $('#hobbies_heading').css('margin-left', '50px');
-
-                                $('#hobbies_image_box').css('opacity', 0);
-
-
-                                $('#hobbies_text').css('opacity', 0);
-                                setTimeout(() => {
-                                    $('#hobbies_heading').css('transition', 'all 500ms ease');
-                                    $('#hobbies_heading').css('margin-left', 0);
-                                    $('#hobbies_heading').css('opacity', 1);
-                                    $('#hobbies_heading').text(hobbies_headings[i]);
-                                }, 100);
-                                setTimeout(() => {
-                                    $('#hobbies_image_box').css('opacity', 1);
-                                    $('#hobbies_image_box').html(hobbies_pictures[i]);
-                                    $('#hobbies_text').html(hobbies_text[i]);
-                                    $('#hobbies_text').css('opacity', 1);
-                                }, 350);
-                            }
-
-                            // ====================================================
-                            function change2(i) {
-                                if (i <= 4 && i >= 1) {
-                                    if (i == 1) {
-                                        $('.color1').css('left', '-100%');
-                                        $('.color2').css('left', '0');
-                                        $('.color3').css('left', '100%');
-                                        $('.color4').css('left', '200%');
-                                        top_color++;
-                                    } else if (i == 2) {
-                                        $('.color1').css('left', '-200%');
-                                        $('.color2').css('left', '-100%');
-                                        $('.color3').css('left', '0px');
-                                        $('.color4').css('left', '100%');
-                                        top_color++;
-                                    } else if (i == 3) {
-                                        $('.color1').css('left', '-300%');
-                                        $('.color2').css('left', '-200%');
-                                        $('.color3').css('left', '-100%');
-                                        $('.color4').css('left', '0px');
-                                        top_color++;
-                                    }
-                                    slide(top_color - 1);
-                                }
-                            }
-
-                            function change23(i) {
-                                if (i <= 4 && i >= 1) {
-                                    if (i == 4) {
-                                        $('.color1').css('left', '-200%');
-                                        $('.color2').css('left', '-100%');
-                                        $('.color3').css('left', '0%');
-                                        $('.color4').css('left', '100%');
-                                        top_color--;
-                                    } else if (i == 3) {
-                                        $('.color1').css('left', '-100%');
-                                        $('.color2').css('left', '0');
-                                        $('.color3').css('left', '100%');
-                                        $('.color4').css('left', '200%');
-                                        top_color--;
-                                    } else if (i == 2) {
-                                        $('.color1').css('left', '0px');
-                                        $('.color2').css('left', '100%');
-                                        $('.color3').css('left', '200%');
-                                        $('.color4').css('left', '300%');
-                                        top_color--;
-                                    }
-                                    slide(top_color - 1);
-                                }
-                            }
-
-                            function left() {
-                                if (top_color > 1)
-                                    change23(top_color)
-                            }
-                            function right() {
-                                if (top_color < 4)
-                                change2(top_color)
+                            function gotocompany() {
+                                window.open('https://www.mantralabsglobal.com');
                             }
                         </script>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div id="cut_photo">
+            <div class="follow_mid">
+                <div id="me_laptop_img_box" class="row">
+                    <div class="col-xs-12 col-md-6 cv_area" style="margin-top: 200px;">
+                        <div id="hello_folks" style="font-size: 30px;" class="m_b_20">Hello folks,</div>
+                        <p class="m_b_20 font_w_light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                            anim id est laborum.</p>
+                        <a target="_blank" href="./files/CV_2020.pdf" download>
+                            <button id="download_cv" class="cv_btn">Download CV
+                                <svg xmlns="http://www.w3.org/2000/svg" width="15.674" height="16.762"
+                                    viewBox="0 0 15.674 16.762">
+                                    <path id="download"
+                                        d="M6.98,18H20.694a.887.887,0,1,1,0,1.764H6.98A.887.887,0,1,1,6.98,18Zm7.837-5.139L17.993,10l1.385,1.247-5.541,4.991L8.295,11.246,9.68,10l3.177,2.861V3h1.959v9.859Z"
+                                        transform="translate(-6 -3)" fill="#fff" fill-rule="evenodd" />
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="col-xs-12 col-md-6" style="margin-top: 200px;">
+                        <img style="width: 100%; border-radius: 20px;" src="./images/me_laptop.JPEG">
+                    </div>
+                </div>
+            </div>
 
 
+            <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 50px auto 20px;" class="">
+                <div class="line col-3 col-md-5"></div>
+                <div class="col-6 col-md-2 header_name">Projects</div>
+                <div class="line col-3 col-md-5"></div>
+            </div>
 
-                    
+            <div class="follow_mid">
+                <div id="subheader_projects" class="subheader">Client's Projects</div>
+                <div style="text-align: right;">
+                    <div style="margin-bottom: 10px; color: #8c8c8c;">start / stop animation and click on tiles</div>
+                    <button class="btn b1" onclick="start()">Start Animation</button>
+                    <button class="btn b2" style="" onclick="stop()">Stop</button>
                 </div>
 
-                <div class="c_section" style="">
-                        <div class="contact_section row">
-                            <div class="col-12 col-md-6" style="text-align: center;">
-                                <img class="svg_img" style="opacity: 0.8;width: 80%;margin: 10px;" src="./images/contact_background.png">
-                            </div>
-                            <div class="col-12 col-md-6" style="position: relative;">
-                                <div class="contact_box">
-                                    <div class="contact_header">
-                                        GET IN TOUCH
-                                    </div>
-                                    <div class="contact_header2">I will really be happy to have your words</div>
-                                    <input placeholder="Write something to me" id="email_body" type="text"><br />
-                                    <button id="email_submit">Send</button>
-                                    <div class="follow_me">Follow me at
-                                        <!-- <div> -->
-                                            <a target="_blank" href="https://www.linkedin.com/in/rupam-basak-a24423115/"><img id="linkedin_img" src="./images/linkedin.png" alt=""></a>
-                                            <a target="_blank" href="https://www.facebook.com/rups20097"><img id="fb_img" src="./images/fb.png" alt=""></a>
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
-                                <div>
-
-                                </div>
-                            </div>
-                            <!-- <i class="fas fa-envelope-open"></i> <input type="email"> -->
-
+                <div id="all_here" style="position: relative;">
+                    <div onclick="comeFirst(1)" class='box1'>
+                        <div class="card_header">Abbvie Inc.</div>
+                        <div class="card_body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                            pariatur. Excepteur sint occaecat cupidatat non proident,
+                            sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </div>
+                        <div class="tech_used">
+                            <img id="node_icon" src="./images/nodejs.png">
+                            <img id="html_icon" src="./images/html5.png">
+                            <img id="css_icon" src="./images/css.png">
+                            <img id="js_icon" src="./images/Javascript.png">
+                        </div>
+                    </div>
+                    <div onclick="comeFirst(2)" class='box2'>
+                        <div class="card_header">Apollo AR</div>
+                        <div class="card_body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="tech_used">
+                            <img id="node_icon" src="./images/nodejs.png">
+                            <img id="angular_icon" src="./images/angular.png">
+                        </div>
+                    </div>
+                    <div onclick="comeFirst(3)" class='box3'>
+                        <div class="card_header">Location Tracker</div>
+                        <div class="card_body">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div class="tech_used">
+                            <img id="node_icon" src="./images/nodejs.png">
+                            <img id="android_icon" src="./images/android.png">
+                        </div>
+                    </div>
                 </div>
 
-                
+                <script>
+                    function makeFirst(cls) {
+                        $(`${cls}`).css('transform', 'scale(1)');
+                        $(`${cls}`).css('z-index', 1);
+                        $(`${cls}`).css('left', 0);
+                        $(`${cls}`).css('opacity', 1);
+                    }
+                    function makeSecond(cls) {
+                        $(`${cls}`).css('transform', 'scale(0.8)');
+                        $(`${cls}`).css('z-index', -50);
+                        $(document).ready(function () {
+                            if ($(window).width() < 768) {
+                                $(`${cls}`).css('left', '70px');
+                            } else {
+                                $(`${cls}`).css('left', '250px');
+                            }
+                        });
+                        // $(`${cls}`).css('left', '250px');
+                        $(`${cls}`).css('opacity', 0.8);
+                    }
+                    function makeThird(cls) {
+                        $(`${cls}`).css('transform', 'scale(0.6)');
+                        $(`${cls}`).css('z-index', -99);
+                        $(document).ready(function () {
+                            if ($(window).width() < 768) {
+                                $(`${cls}`).css('left', '130px');
+                            } else {
+                                $(`${cls}`).css('left', '400px');
+                            }
+                        });
+                        $(`${cls}`).css('opacity', 0.5);
+                    }
+
+                    function shirkTile(cls) {
+                        $(`${cls}`).css('transform', 'scale(0.0)');
+                        $(`${cls}`).css('z-index', -99);
+                        $(`${cls}`).css('opacity', 0.5);
+                        $(`${cls}`).css('left', 0);
+                    }
+
+                    let topTile = 1;
+                    function comeFirst(n) {
+                        if (n == 2) {
+                            $('#subheader_projects').text('Client\'s Projects');
+                            if (topTile == 1) {
+                                shirkTile('.box1');
+                                makeFirst('.box2');
+                                setTimeout(() => {
+                                    makeSecond('.box3');
+                                }, 300);
+                                setTimeout(() => {
+                                    makeThird('.box1');
+                                }, 400)
+                            } else if (topTile == 3) {
+                                shirkTile('.box3');
+                                shirkTile('.box1');
+                                makeFirst('.box2');
+                                setTimeout(() => {
+                                    makeSecond('.box3');
+                                }, 300);
+                                setTimeout(() => {
+                                    makeThird('.box1');
+                                }, 400)
+                            }
+                        }
+                        if (n == 3) {
+                            $('#subheader_projects').text('Self Project');
+                            if (topTile == 1) {
+                                shirkTile('.box2');
+                                shirkTile('.box1');
+                                makeFirst('.box3');
+                                setTimeout(() => {
+                                    makeSecond('.box1');
+                                }, 300);
+                                setTimeout(() => {
+                                    makeThird('.box2');
+                                }, 400)
+                            } else if (topTile == 2) {
+                                shirkTile('.box2');
+                                makeFirst('.box3');
+                                setTimeout(() => {
+                                    makeSecond('.box1');
+                                }, 300)
+                                setTimeout(() => {
+                                    makeThird('.box2');
+                                }, 400)
+                            }
+                        }
+                        if (n == 1) {
+                            $('#subheader_projects').text('Client\'s Projects');
+                            if (topTile == 2) {
+                                shirkTile('.box2');
+                                shirkTile('.box3');
+                                makeFirst('.box1');
+                                setTimeout(() => {
+                                    makeSecond('.box2');
+                                }, 300);
+                                setTimeout(() => {
+                                    makeThird('.box3');
+                                }, 400)
+                            } else if (topTile == 3) {
+                                shirkTile('.box3');
+                                makeFirst('.box1');
+                                setTimeout(() => {
+                                    makeSecond('.box2');
+                                }, 300)
+                                setTimeout(() => {
+                                    makeThird('.box3');
+                                }, 400)
+                            }
+                        }
+                        topTile = n;
+                    }
+
+                    function starts() {
+                        let i = 2;
+                        return function () {
+                            comeFirst(i);
+                            if (i + 1 > 3) {
+                                i = 1;
+                            } else {
+                                i += 1;
+                            }
+                        }
+                    }
+
+                    let x;
+
+                    (function () {
+                        $('#all_here').css('pointer-events', 'none')
+                        $('.b1').css('display', 'none')
+                        $('.b2').css('display', 'block')
+                        // let loop = starts();
+                        // x = setInterval(loop, 3000)
+                    })();
+
+                    function start() {
+                        $('#all_here').css('pointer-events', 'none')
+                        $('.b1').css('display', 'none');
+                        $('.b2').css('display', 'block');
+                        let loop = starts();
+                        x = setInterval(loop, 3000)
+                    }
+
+                    function stop() {
+                        $('#all_here').css('pointer-events', 'all')
+                        $('.b1').css('display', 'block')
+                        $('.b2').css('display', 'none')
+                        clearInterval(x);
+                    }
+                </script>
+            </div>
+
+            <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 500px auto 20px;" class="">
+                <div class="line col-3 col-md-4"></div>
+                <div class="col-6 col-md-4 header_name" style="padding: 0 !important;">Technical Skills</div>
+                <div class="line col-3 col-md-4"></div>
+            </div>
+            <div class="follow_mid">
+                <div class="row">
+                    <div class="skill_cards col-3">
+                        <img style="width: 100%;" src="./images/sailsjs.png">
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="skill_cards col-3">
+                        <img style="height: 100%;" src="./images/html5.png">
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="skill_cards col-3">
+                        <img style="height: 100%;" src="./images/css.png">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="skill_cards col-3">
+                        <img style="height: 100%; " src="./images/Javascript.png">
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="skill_cards col-3">
+                        <img style="height: 100%;" src="./images/angular.png">
+                    </div>
+                    <div class="col-1">
+                    </div>
+                    <div class="skill_cards col-3">
+                        <img style="height: 100%;" src="./images/android.png">
+                    </div>
+                    <!-- <div class="tool_tip">Hover over me</div> -->
+                </div>
+            </div>
+
+            <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 50px auto 20px;" class="">
+                <div class="line col-3 col-md-5"></div>
+                <div class="col-6 col-md-2 header_name">Quotes</div>
+                <div class="line col-3 col-md-5"></div>
+            </div>
+
+            <div class="follow_mid">
+                <div class="subheader">Clients' Word</div>
+                <div class="client_quotes row">
+                    <div id="vanish_for_phone" class="col-md-1"></div>
+                    <div id="xxx" class="col-12 col-md-5">
+                        <img class="client_image" src="./images/img1.png">
+                        <div class="client_words" style="background: #A25699;">
+                            <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281"
+                                viewBox="0 0 34.339 23.281">
+                                <g id="quotes" transform="translate(-4.5 -6.75)">
+                                    <path id="Path_2" data-name="Path 2"
+                                        d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z"
+                                        fill="#fff" />
+                                    <path id="Path_3" data-name="Path 3"
+                                        d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z"
+                                        transform="translate(7.34)" fill="#fff" />
+                                </g>
+                            </svg>
+
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+                                <div class="client_details">
+                                    <div>Gyan P Srivastav</div>
+                                    <div class="client_designation">Scientific Engineer<br />
+                                        Abbvie Inc.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yyy" class="col-12 col-md-5 change_to_slide">
+                        <img class="client_image" src="./images/img2.png">
+                        <div class="client_words" style="background: #8256A2;">
+                            <svg id="inverted_commas" xmlns="http://www.w3.org/2000/svg" width="34.339" height="23.281"
+                                viewBox="0 0 34.339 23.281">
+                                <g id="quotes" transform="translate(-4.5 -6.75)">
+                                    <path id="Path_2" data-name="Path 2"
+                                        d="M13.5,17.778H6.874a11.172,11.172,0,0,1,4.376-7.524l2.014-1.47L12.026,6.75,10.013,8.22A13.835,13.835,0,0,0,4.5,19.432v8.148a2.357,2.357,0,0,0,2.25,2.451H13.5a2.357,2.357,0,0,0,2.25-2.451V20.229A2.357,2.357,0,0,0,13.5,17.778Z"
+                                        fill="#fff" />
+                                    <path id="Path_3" data-name="Path 3"
+                                        d="M29.25,17.778H22.624A11.172,11.172,0,0,1,27,10.254l2.014-1.47L27.787,6.75,25.762,8.22a13.835,13.835,0,0,0-5.513,11.212v8.148a2.357,2.357,0,0,0,2.25,2.451h6.75a2.357,2.357,0,0,0,2.25-2.451V20.229a2.357,2.357,0,0,0-2.25-2.451Z"
+                                        transform="translate(7.34)" fill="#fff" />
+                                </g>
+                            </svg>
+
+                            <div class="words">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt ut labore et dolore magna aliqua.
+                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                                commodo consequat.
+                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                                nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+
+                                <div class="client_details">
+                                    <div>Gyan P Srivastav</div>
+                                    <div class="client_designation">Scientific Engineer<br />
+                                        Abbvie Inc.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="vanish_for_phone" class="col-md-1"></div>
+                </div>
+
+                <div class="subheader">Employees' Word</div>
+                <div class="employee_words_box">
+                    <div class="employee_words">
+                        <div class="words">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+
+                            <div class="employee_details">
+                                <div style="font-size: 12px;">Sayon Mozumder</div>
+                                <div style="">iOS developer<br />
+                                    Company Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee_words" style="background-color: #A25670;">
+                        <div class="words">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+
+                            <div class="employee_details">
+                                <div style="font-size: 12px;">Sayon Mozumder</div>
+                                <div style="">iOS developer<br />
+                                    Company Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee_words" style="background-color: #A25656;">
+                        <div class="words">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+
+                            <div class="employee_details">
+                                <div style="font-size: 12px;">Sayon Mozumder</div>
+                                <div style="">iOS developer<br />
+                                    Company Name</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee_words" style="background-color: #a29956;">
+                        <div class="words">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
+
+                            <div class="employee_details">
+                                <div style="font-size: 12px;">Sayon Mozumder</div>
+                                <div style="">iOS developer<br />
+                                    Company Name</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
-        </section>
+
+            <div class="header row" style="text-align: center; 
+                width: 1110px;
+                margin: 50px auto 20px;" class="">
+                <div class="line col-3 col-md-5"></div>
+                <div class="col-6 col-md-2 header_name">Hobbies</div>
+                <div class="line col-3 col-md-5"></div>
+            </div>
+
+            <div style="margin-bottom: 50px;">
+
+
+                <div id="back_box">
+                    <div class="color1"></div>
+                    <div class="color2"></div>
+                    <div class="color3"></div>
+                    <div class="color4"></div>
+
+                    <!-- <div class="" style="position: relative;"> -->
+                    <div class="">
+                        <div id="hobbies_image_box">
+                            <img style="width: 100%;" src="./images/calligraphy.jpg">
+                        </div>
+                        <div class="nav_left" onclick="left()" onmouseover="change(1)" onmouseout="changeBack(1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="nav_right" onclick="right()" onmouseover="change(2)" onmouseout="changeBack(2)">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                        <div id="hobbies_text_box">
+                            <div style="opacity: 0;" id="hobbies_heading"></div>
+                            <p id="hobbies_text">Best of my hobbies.<br />
+                                Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive",
+                                Gothic Style" etc.
+                            </p>
+                        </div>
+                        <div id="my_pages">
+                            <a href="https://www.youtube.com/channel/UCREGyG0xdYSUBEjN7mjzv4Q" target="_blank"><img
+                                    style="width: 25px" src="./images/youtube1.png"></a>
+                            <a href="https://medium.com/@rups20097" target="_blank"><img style="width: 25px"
+                                    src="./images/medium.png"></a>
+                            <a href="https://www.fb.com/themoa.rupss" target="_blank"><img style="width: 25px"
+                                    src="./images/fb.png"></a>
+                            <a href="https://www.instagram.com/mind_of_art_rupss/" target="_blank"><img
+                                    style="width: 30px" src="./images/instagram.png"></a>
+                        </div>
+                    </div>
+                    <script>
+                        (function () {
+                            // let x = document.getElementById('xxx').offsetTop;
+                            if (window.innerWidth < 768) {
+                                let y = document.getElementById('yyy').offsetTop;
+                                $('#yyy').css('margin-top', `-${y}px`);
+
+                                let x_width = $('#xxx img').css('width');
+                                let w = parseInt(x_width.split('px')[0]) + 20
+                                console.log('x_width', x_width)
+                                $('#yyy').css('left', `${w}px`);
+                            }
+                        })()
+
+                        let top_color = 1;
+                        let set_to_calligraphy = true;
+                        let hobbies_text = [
+                            `Best of my hobbies.<br />
+                                    Love to do this art of writing. I am a big fan of "Spencerian Cursive", "Roman Cursive", Gothic Style" etc.`,
+                            `It takes more than 5 hours to draw a portait but, <br />
+                                    This is the one thing always makes me positive and generate a beliefe that I do understand perfection even in a difficult work.`,
+                            `I love to write often.<br />
+                                    My quotes always come from my motivation and learning.<br />
+                                    Writing stories, poems are always fun for me and let me dive deep into my world of philosophies.`,
+                            `Vlogs and motivations.<br />
+                                    I belive vlogs are for them who love to open-up to share and motivational speeches are from my life inspirations.`,
+                        ];
+                        let hobbies_headings = ['Calligraphy', 'Portrait Sketch', 'Writings', 'YouTube'];
+                        let hobbies_pictures = [
+                            '<img style="width: 100%;" src="./images/calligraphy.jpg">',
+                            '<img style="width: 100%;" src="./images/evans.png">',
+                            '<img style="width: 100%;" src="./images/quote.png">',
+                            '<img style="width: 100%;" src="./images/youtube.png">'
+                        ];
+
+                        let triggered = false;
+                        let like_triggered = false;
+                        $(window).scroll(() => {
+                            let scr = document.documentElement.scrollTop;
+                            if (scr > 1500 && like_triggered == false) {
+                                console.log('clicked');
+                                like_triggered = true;
+                                $('.hit_like_overlay').css('display', 'block')
+                            }
+                            if (scr > 2570 && set_to_calligraphy == true) {
+                                set_to_calligraphy = false;
+                                headerAnimation();
+                            }
+                            if (scr > 700 && scr < 2000 && triggered == false) {
+                                triggered = true;
+                                start();
+                                console.log('ONCE')
+                            } else if ((scr < 700 || scr > 2000) && triggered == true) {
+                                triggered = false;
+                                console.log('FALSE')
+                                stop();
+                            }
+                        })
+                        function headerAnimation(x = 'Calligraphy') {
+                            $('#hobbies_heading').css('opacity', 1);
+                            $('#hobbies_heading').css('margin-left', 0);
+                            $('#hobbies_heading').text(x);
+                        }
+                        function change(i) {
+                            if (i == 1) {
+                                $('.nav_left i').css('opacity', 1);
+                            } else {
+                                $('.nav_right i').css('opacity', 1);
+                            }
+                        }
+                        function changeBack(i) {
+                            if (i == 1) {
+                                $('.nav_left i').css('opacity', 0.6);
+                            } else {
+                                $('.nav_right i').css('opacity', 0.6);
+                            }
+                        }
+
+                        function slide(i) {
+                            $('#hobbies_heading').css('opacity', 0);
+                            $('#hobbies_heading').css('transition', 'none');
+                            $('#hobbies_heading').css('margin-left', '50px');
+
+                            $('#hobbies_image_box').css('opacity', 0);
+
+
+                            $('#hobbies_text').css('opacity', 0);
+                            setTimeout(() => {
+                                $('#hobbies_heading').css('transition', 'all 500ms ease');
+                                $('#hobbies_heading').css('margin-left', 0);
+                                $('#hobbies_heading').css('opacity', 1);
+                                $('#hobbies_heading').text(hobbies_headings[i]);
+                            }, 100);
+                            setTimeout(() => {
+                                $('#hobbies_image_box').css('opacity', 1);
+                                $('#hobbies_image_box').html(hobbies_pictures[i]);
+                                $('#hobbies_text').html(hobbies_text[i]);
+                                $('#hobbies_text').css('opacity', 1);
+                            }, 350);
+                        }
+
+                        // ====================================================
+                        function change2(i) {
+                            if (i <= 4 && i >= 1) {
+                                if (i == 1) {
+                                    $('.color1').css('left', '-100%');
+                                    $('.color2').css('left', '0');
+                                    $('.color3').css('left', '100%');
+                                    $('.color4').css('left', '200%');
+                                    top_color++;
+                                } else if (i == 2) {
+                                    $('.color1').css('left', '-200%');
+                                    $('.color2').css('left', '-100%');
+                                    $('.color3').css('left', '0px');
+                                    $('.color4').css('left', '100%');
+                                    top_color++;
+                                } else if (i == 3) {
+                                    $('.color1').css('left', '-300%');
+                                    $('.color2').css('left', '-200%');
+                                    $('.color3').css('left', '-100%');
+                                    $('.color4').css('left', '0px');
+                                    top_color++;
+                                }
+                                slide(top_color - 1);
+                            }
+                        }
+
+                        function change23(i) {
+                            if (i <= 4 && i >= 1) {
+                                if (i == 4) {
+                                    $('.color1').css('left', '-200%');
+                                    $('.color2').css('left', '-100%');
+                                    $('.color3').css('left', '0%');
+                                    $('.color4').css('left', '100%');
+                                    top_color--;
+                                } else if (i == 3) {
+                                    $('.color1').css('left', '-100%');
+                                    $('.color2').css('left', '0');
+                                    $('.color3').css('left', '100%');
+                                    $('.color4').css('left', '200%');
+                                    top_color--;
+                                } else if (i == 2) {
+                                    $('.color1').css('left', '0px');
+                                    $('.color2').css('left', '100%');
+                                    $('.color3').css('left', '200%');
+                                    $('.color4').css('left', '300%');
+                                    top_color--;
+                                }
+                                slide(top_color - 1);
+                            }
+                        }
+
+                        function left() {
+                            if (top_color > 1)
+                                change23(top_color)
+                        }
+                        function right() {
+                            if (top_color < 4)
+                                change2(top_color)
+                        }
+                    </script>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="c_section" style="">
+                <div class="contact_section row">
+                    <div class="col-12 col-md-6" style="text-align: center;">
+                        <img class="svg_img" style="opacity: 0.8;width: 80%;margin: 10px;"
+                            src="./images/contact_background.png">
+                    </div>
+                    <div class="col-12 col-md-6" style="position: relative;">
+                        <div class="contact_box">
+                            <div class="contact_header">
+                                GET IN TOUCH
+                            </div>
+                            <div class="contact_header2">I will really be happy to have your words</div>
+                            <input placeholder="Write something to me" id="email_body" type="text"><br />
+                            <button id="email_submit">Send</button>
+                            <div class="follow_me">Follow me at
+                                <!-- <div> -->
+                                <a target="_blank" href="https://www.linkedin.com/in/rupam-basak-a24423115/"><img
+                                        id="linkedin_img" src="./images/linkedin.png" alt=""></a>
+                                <a target="_blank" href="https://www.facebook.com/rups20097"><img id="fb_img"
+                                        src="./images/fb.png" alt=""></a>
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div>
+
+                        </div>
+                    </div>
+                    <!-- <i class="fas fa-envelope-open"></i> <input type="email"> -->
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <section>
+        <div class="hit_like_overlay" style="display: none;">
+            <div class="hit_like_box">
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <img class="like_img" src="./images/like.png" width="100%">
+                    </div>
+                    <div id="before_like" class="col-12 col-md-6" style="transition: all 200ms ease;">
+                        <div class="like_texts">
+                            <h1>Hit a like</h1>
+                            <p style="font-weight: bold;">
+                                Hi there,
+                                I hope you are liking my page.
+                                Please support me by hitting the like button.
+                            </p>
+                            <p>
+                                Stay tuned with this page.
+                                New developments are under progress
+                            </p>
+                            <div class="row">
+                                <div onclick="liked()" class="col like_btn">
+                                    <i class="fas fa-thumbs-up"></i>
+                                </div>
+                                <div class="col">
+                                    <div class="skip"><u onclick="hide_like_box()">skip for now ...</u></div>
+                                    <script>
+                                        function hide_like_box() {
+                                            if ($('.hit_like_overlay').css('display') =='block') {
+                                                $('.hit_like_overlay').css('display', 'none')
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="after_like" class="col" style="transition: all 1s ease; display: none; opacity: 0; padding: 10px;">
+                        <div class="like_texts">
+                            <h1>Thanks!</h1>
+                            <p style="">
+                                Your like is much appreciated.<br  />
+                                <strong>You have increased my like count to 100.</strong>
+                            </p>
+                            <p>
+                                Please stay tuned with me.
+                            </p><div class="skip" style="font-size: 16px; color: #ff6969; float: right; margin-top: 30px;" onclick="hide_like_box()">Close</div>
+                        </div>
+                        
+                    </div>
+                    <script>
+                        function liked() {
+                            $('#before_like').css('opacity', 0);
+                            setTimeout(() => {
+                                $('#before_like').css('display', 'none');
+                                $('#after_like').css('display', 'block');
+                            }, 200)
+                            setTimeout(() => {
+                                $('#after_like').css('opacity', 1);   
+                            }, 250);
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
+
 </html>

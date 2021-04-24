@@ -60,7 +60,7 @@ section {
 
 .my_img {
     width: 100%;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     z-index: -9;
@@ -640,4 +640,53 @@ p {
  width: 4%;
  margin-top: -6px;
  cursor: pointer;
+}
+.hit_like_overlay {
+  position: fixed;
+  background: #000000a3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+.hit_like_box {
+  width: 600px;
+  background: white;
+  top: calc(50% - 150px);
+  position: absolute;
+  left: calc(50% - 300px);
+  border-radius: 35px;
+}
+
+.like_img {
+  margin: 50px 0 50px 40px;
+}
+.like_texts h1 {
+  color: #6c63ff;
+  font-weight: 900;
+  letter-spacing: 1px;
+  font-size: 50px;
+}
+
+.like_texts {
+  padding: 30px;
+  color: #9A9A9A;
+  margin-top: 20px;
+  font-size: 15px;
+}
+.like_btn i {
+  background: #6c63ff;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 40px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.skip {
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 10px;
 }
