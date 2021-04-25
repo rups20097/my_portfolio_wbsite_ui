@@ -853,6 +853,25 @@
             </div>
         </div>
     </section>
+    <script>
+        function getIP(){
+            console.log('INITIATED')
+            $.ajax({
+                method: 'GET',
+                crossDomain: true,
+                dataType: 'json',
+                contentType: false,
+                processData: false,
+                url: 'https://nordvpn.com/wp-admin/admin-ajax.php?action=get_user_info_data',
+                success: (data) => {
+                    console.log("DETAILS ::", data)
+                }, 
+                error: (err) => {
+                    console.log(err);
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
