@@ -22,6 +22,11 @@
         height: 550px;
     }
 
+    a#dropdownMenuLink:active {
+        width: 100%;
+        margin: 0;
+    }
+
 
     .header_name {
         font-size: 30px;
@@ -34,7 +39,7 @@
         display: none;
     }
     .ham_drop {
-        z-index: 9;
+        z-index: 999;
         /* float: right; */
         margin-top: -25px;
         background: transparent;
@@ -229,7 +234,7 @@
         width: 300px !important;
     }
     .like_texts {
-        padding: 10px;
+        padding: 10px 10px 20px;
         margin-top: 0;
     }
     .like_texts h1 {
@@ -238,5 +243,11 @@
     .like_img {
         margin: 10px 0 10px 10px;
         width: 50% !important;
+    }
+    .like_btn {
+        padding-left: 0 !important;
+    }
+    .mobile_texts {
+        font-size: 12px;
     }
 }

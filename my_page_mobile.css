@@ -171,6 +171,9 @@
         bottom: 0;
         background: none;
         z-index: 9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     #back_box {
         /* height: 550px; */
@@ -235,6 +238,10 @@
     }
     a#dropdownMenuLink {
         border: 0 !important;
+    }
+    a#dropdownMenuLink:active {
+        width: 100%;
+        margin: 0;
     }
     .like_img {
         margin: 10px 0 10px 10px;
