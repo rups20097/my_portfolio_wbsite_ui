@@ -116,12 +116,14 @@
       }
     .box1, .box2, .box3 {
         padding: 20px 30px;
-        border-radius: 10px;
+        border-radius: 10px 50px;
         width: 250px;
         height: 400px;
       }
     .card_body {
         font-size: 12px;
+        height: 65%;
+        overflow: scroll;
     }
     .b1, .b2 {
         margin-top: -90px;
@@ -185,7 +187,7 @@
         top: 300px;
         /* bottom: 30px; */
         width: 90%;
-        left: 30px;
+        left: 20px;
         padding: 10px 20px
     }
     #hobbies_heading {

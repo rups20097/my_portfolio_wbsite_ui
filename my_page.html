@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="./images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rupam Basak - portfolio website</title>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -110,17 +113,17 @@
                         <div class="my_name m_b_20 font_w_light">Rupam Basak</div>
                         <div style="font-size: 20px;" class="m_b_20">Software Engineer | Full-stack JS Developer |
                             Artist</div>
-                        <div style="font-size: 16px;" class="m_b_20 font_w_light">2.5 years of experience specialising
-                            in Application Development
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam
+                        <div style="font-size: 16px;" class="m_b_20 font_w_light">3+ years of experience specialising
+                            in Application Development.<br>
+                            I am focused on developing robust application at local and global levels.
                         </div>
-                        <div style="font-size: 16px;" class="m_b_20 font_w_light">Currently working at <span
-                                onclick="gotocompany()" class="company_name">Mantra Labs</span>
+                        <div style="font-size: 16px;" class="m_b_20 font_w_light">Striving to leverage my skill at <span
+                                onclick="gotocompany()" class="company_name">Cognizant</span>
                         </div>
                         <script>
                             function gotocompany() {
-                                window.open('https://www.mantralabsglobal.com');
+                                // window.open('https://www.mantralabsglobal.com');
+                                window.open('https://www.cognizant.com');
                             }
                         </script>
                     </div>
@@ -132,12 +135,14 @@
                 <div id="me_laptop_img_box" class="row">
                     <div class="col-xs-12 col-md-6 cv_area" style="margin-top: 200px;">
                         <div id="hello_folks" style="font-size: 30px;" class="m_b_20">Hello folks,</div>
-                        <p class="m_b_20 font_w_light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                            irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-                            anim id est laborum.</p>
+                        <p class="m_b_20">
+                            I am a passionate worker. Whether its an art or my hobbies or maybe its a development, I give my best.
+                            I believe, <br/>
+                            <p class="quoted">an Artist always try to make things perfect.</p><br/> Its their virtue. Thus according to them mistakes should be tending to zero for any particular work.
+                            Thats the golden rule I follow in every work.
+                            I don't develop because its my job or I have to, but I Love to.
+                            I have my dreams my passions my goals with developments and I am always excited about it. Thus I never feel saturated in working.
+                        </p>
                         <a target="_blank" href="./files/CV_2020.pdf" download>
                             <button id="download_cv" class="cv_btn">Download CV
                                 <svg xmlns="http://www.w3.org/2000/svg" width="15.674" height="16.762"
@@ -165,7 +170,7 @@
             </div>
 
             <div class="follow_mid">
-                <div id="subheader_projects" class="subheader">Client's Projects</div>
+                <div id="subheader_projects" class="subheader">Project Experiences</div>
                 <div style="text-align: right;">
                     <div style="margin-bottom: 10px; color: #8c8c8c;">start / stop animation and click on tiles</div>
                     <button class="btn b1" onclick="start()">Start Animation</button>
@@ -174,15 +179,17 @@
 
                 <div id="all_here" style="position: relative;">
                     <div onclick="comeFirst(1)" class='box1'>
-                        <div class="card_header">Abbvie Inc.</div>
+                        <div class="card_header">Proteostasis Map (Abbvie)</div>
                         <div class="card_body">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua.
-                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat.
-                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                            pariatur. Excepteur sint occaecat cupidatat non proident,
-                            sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            I really enjoyed to develop this project from scratch. I am really thankful to <strong>Gyan Prakash</strong> for giving me this opportunity to showcase my skills.
+                            <p>
+                                Project was challenging. Handelling crores of data, quering them, processing them, showing in UI using graphs was all over a tough work.
+                            </p>
+                            <p>
+                                <strong>Node.js</strong> was best choice here because of its superfast IO operations.<br/>
+                                <strong>MongoDB</strong> was the great choice because of its JSON structure data storing capabilty and mostly its quick searching capability.<br/>
+                                UI was totally dynamic with <strong>Javascript ES6</strong>.
+                            </p>
                         </div>
                         <div class="tech_used">
                             <img id="node_icon" src="./images/nodejs.png">
@@ -339,6 +346,7 @@
                         let i = 2;
                         return function () {
                             comeFirst(i);
+                            console.log('CALLED', i)
                             if (i + 1 > 3) {
                                 i = 1;
                             } else {
@@ -347,14 +355,12 @@
                         }
                     }
 
-                    let x;
+                    let intervalVariable;
 
                     (function () {
                         $('#all_here').css('pointer-events', 'none')
                         $('.b1').css('display', 'none')
                         $('.b2').css('display', 'block')
-                        // let loop = starts();
-                        // x = setInterval(loop, 3000)
                     })();
 
                     function start() {
@@ -362,14 +368,15 @@
                         $('.b1').css('display', 'none');
                         $('.b2').css('display', 'block');
                         let loop = starts();
-                        x = setInterval(loop, 3000)
+                        intervalVariable = setInterval(loop, 2000);
                     }
 
                     function stop() {
+                        // console.log('LOOP --->', intervalVariable);
                         $('#all_here').css('pointer-events', 'all')
                         $('.b1').css('display', 'block')
                         $('.b2').css('display', 'none')
-                        clearInterval(x);
+                        clearInterval(intervalVariable);
                     }
                 </script>
             </div>
@@ -409,7 +416,7 @@
                     <div class="col-1">
                     </div>
                     <div class="skill_cards col-3">
-                        <img style="height: 100%;" src="./images/android.png">
+                        <img style="height: 100%;" src="./images/react.svg.png">
                     </div>
                     <!-- <div class="tool_tip">Hover over me</div> -->
                 </div>
@@ -679,6 +686,7 @@
                         }
 
                         function slide(i) {
+                           console.log('PRINT i', i)
                             $('#hobbies_heading').css('opacity', 0);
                             $('#hobbies_heading').css('transition', 'none');
                             $('#hobbies_heading').css('margin-left', '50px');
