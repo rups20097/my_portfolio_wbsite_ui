@@ -1,0 +1,134 @@
+:root {
+  --blue: #1e90ff;
+  --animation-time: 6s;
+  --animation-delay: 2s;
+  --characters: 25;
+}
+
+.content-mid {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  min-height: 100vh;
+}
+.typed_line {
+  font-family: "Source Code Pro", monospace;
+  color: var(--blue);
+  font-size: clamp(1rem, 3vw + 1rem, 4rem);
+  width: max-content;
+  position: relative;
+}
+.typed_line::before,
+.typed_line::after {
+  content: "";
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+.typed_line::before {
+  background: #fff;
+  animation: toRight var(--animation-time) steps(var(--characters))
+    var(--animation-delay) forwards;
+}
+
+.typed_line::after {
+  background: var(--blue);
+  width: calc(0.2vw + 2px);
+  animation: toRight var(--animation-time) steps(var(--characters))
+      var(--animation-delay) forwards,
+    blink 800ms calc(2 / 0.75), blinkAgain 800ms 8.6s infinite;
+}
+
+.welcome {
+  font-size: calc(1vw + 12px);
+  letter-spacing: 2px;
+  color: #8b9195;
+  font-family: "Noto Sans", sans-serif;
+  transform: translateY(60px);
+  animation: appearUp 2s ease calc(var(--animation-time) + 2.5s) forwards;
+  opacity: 0;
+}
+body {
+    overflow: hidden;
+    animation: enableScroll 2s ease 11s 1 forwards;
+}
+.full_screen {
+    z-index: 99999 !important;
+    position: absolute !important;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white !important;
+    animation: fadeOut 2s ease 11s 1 forwards;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes toRight {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blinkAgain {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes enableScroll {
+    to {
+        overflow: scroll;
+    }
+}
+
+@keyframes appearUp {
+  to {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+}
+@keyframes fadeOut {
+    to {
+        /* opacity: 0; */
+        transform: translateY(-100vh);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+  .typed_line {
+    font-size: clamp(1rem, 2vw + 1rem, 4rem);
+    font-weight: 400;
+  }
+}

@@ -29,6 +29,10 @@
 } */
 
 @media (max-width: 768px) and (min-width: 390px) {
+
+    .row {
+        justify-content: space-evenly;
+    }
     
     .cv_area a {
         display: inline-block;

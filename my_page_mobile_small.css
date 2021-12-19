@@ -85,6 +85,8 @@
     .row {
         width: 100% !important;
         margin-left: 0 !important;
+        justify-content: space-evenly !important;
+        
     }
     .img_margin {
         margin-top: 100px !important;

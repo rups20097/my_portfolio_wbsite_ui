@@ -394,6 +394,20 @@ p {
       display: flex;
       overflow-x: auto;
   }
+
+  .employee_words_box::-webkit-scrollbar {
+    height: 6px;
+    width: 10px !important;
+    background: #4f4f4f;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .employee_words_box::-webkit-scrollbar-thumb {
+    background: #8a8a8a;
+    border-radius: 20px;
+  }
+  
   .employee_words {
       margin: 30px;
     /* font-size: 14px; */
@@ -723,3 +737,4 @@ p {
   outline: 0;
   width: 100%;
 }
+
