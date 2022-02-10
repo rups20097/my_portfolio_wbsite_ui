@@ -1,13 +1,3 @@
-// $(window).resize(() => {
-//     let x = $(window).width();
-//     if (x < 500) {
-//         $('#change_view_for_mobile').removeClass('col-6')
-//         $('#change_view_for_mobile').addClass('col-12')
-//     } else {
-//         $('#change_view_for_mobile').removeClass('col-12')
-//         $('#change_view_for_mobile').addClass('col-6')
-//     }
-// });
 $(document).ready(() => {
   if ($(window).width() < 768) {
     console.log("THIS");

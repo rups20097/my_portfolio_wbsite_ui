@@ -254,4 +254,15 @@
     .mobile_texts {
         font-size: 12px;
     }
+    
+    .employee_img {
+        width: 5rem;
+        position: absolute;
+        border-radius: 50%;
+        top: -14px;
+        left: 0px;
+    }
+    .abccd a {
+        font-size: 14px !important;
+    }
 }

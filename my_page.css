@@ -378,7 +378,11 @@ p {
 
   .client_words .words {
     padding: 10px 10px 0 10px;
-    /* font-size: 14px; */
+    font-size: 14px;
+  }
+
+  .words {
+    font-size: 12px;
   }
 
   .client_details {
@@ -393,6 +397,14 @@ p {
   .employee_words_box {
       display: flex;
       overflow-x: auto;
+  }
+
+  .employee_img {
+    width: 7rem;
+    position: absolute;
+    border-radius: 50%;
+    top: -50px;
+    left: 12px;
   }
 
   .employee_words_box::-webkit-scrollbar {
@@ -412,10 +424,10 @@ p {
       margin: 30px;
     /* font-size: 14px; */
       font-weight: 300;
-      width: 300px;
+      width: 350px;
       flex: 0 0 auto;
       background: #99A256;
-      padding: 40px 40px 20px;
+      padding: 20px 20px 20px;
       border-top-left-radius: 40px;
       border-bottom-right-radius: 40px;
   }
